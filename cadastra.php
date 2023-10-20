@@ -12,9 +12,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $sql = "INSERT INTO users (name, email, password) VALUES(?,?,?)"; //definir a consulta sql para inserir um novo usuario na tabela users
 
+    $stmt = $conn->prepare($sql); //prepara a consulta sql segura
+
+    $stmt->bind_param("sss", $name, $email, $hashed_password); //garante que os dados sejam tratado corretamente evitando problema de seguraça
+
+    if($stmt->execute()){
+
+        echo"Usuário Criado com sucesso";
+     } 
     
+    else {
+        echo "Erro: " . $sql."<br>" . $coon->error;
+
+    }
+
+    $stmt->close();
 
 }
 
+$conn->close();
 
 ?>
