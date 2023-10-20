@@ -62,7 +62,7 @@ $error = "Usuario ou senha incorreta";
 			<a href="#">contato</a>
 			<a href="#">sobre</a>
 			<a href="#">Serviços</a>
-			<a href="#">Suporte</a>
+			<a href="ph.php">Suporte</a>
 			<button class="btnLogin-popup">Login</button>
         </nav>
 
