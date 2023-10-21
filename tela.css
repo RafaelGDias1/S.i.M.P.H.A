@@ -32,10 +32,17 @@ z-index: 99;
 
 }
 
+
+
 .logo{
-font-size: 2em;
-color: #fff;
-user-select: none;
+
+
+float: right;
+width: 15%;
+border: thin solid;
+padding: 5px;
+margin: 0px 10px 10px 0;
+
 }
 
 .navegacao a {

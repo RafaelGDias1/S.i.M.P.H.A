@@ -56,8 +56,9 @@ $error = "Usuario ou senha incorreta";
 
   
 	<header>
-
-	   <h2 class="logo"> Logo </h2>
+	<div class="logo"></div> 
+		<img src="img/PH-img.png" alt="PH" style="width:100px; height:100px;">
+	   
 		<nav class="navegacao">
 			<a href="#">contato</a>
 			<a href="#">sobre</a>
