@@ -1,4 +1,15 @@
-<?php
+<?php     
+  session_star();
+  require_once "config.pgp"; 
+  function logout(){ 
+  sessio_unset();
+session_destroy();
+header("Location: index.php");
+exit;
+
+}
+  if(!isser($_session["Loggedin"]) || $_session["Loggedin"] !== true){}
+
 	$cabe = $_POST ["cabe"];
 	$login = $_POST["login"];
 
