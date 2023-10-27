@@ -10,12 +10,17 @@
     {
         session_unset();
         session_destroy();
-        header("Location: site.php");
+        header("Location: pagPH.php");
         exit;
     }
 
     if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         header("Location: site.php");
+        exit;
+    }
+
+    if (isset($_POST["logout"])) {
+        logout();
         exit;
     }
 
@@ -30,16 +35,14 @@
     <title>Web Site</title>
 </head>
 <body>
-    <h1>LOGADO</h1>
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <input type="submit" name="logout" value="logout">
 
-    <?php 
-    if (isset($_POST["logout"])) {
-        logout();
-    }
-    ?>
+    <h1>LOGADO</h1>
 
+  
+  
 </body>
 </html>

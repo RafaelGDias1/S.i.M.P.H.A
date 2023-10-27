@@ -36,7 +36,7 @@ a {
   }
   
   main {
-    background: url("bg.jpg") no-repeat center center;
+    background: url("img/PH-img.png") no-repeat center center;
     background-size: cover;
     height: 92vh;
   }
