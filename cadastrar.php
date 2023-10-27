@@ -20,11 +20,8 @@
   <div class="card-l login">
    <h1>Cadastrar</h1><br>
 
-            <div class="item">
-               <span class="icon"><ion-icon name="person"></ion-icon></span> 
-                 <label for="name">Nome</label>
-                 <input type="text" name="name" required><br>
-            </div>
+     
+            
 
             <div class="item">
                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
