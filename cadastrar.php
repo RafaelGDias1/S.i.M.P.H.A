@@ -17,33 +17,43 @@
   <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
   
 
-  <div class="card-l login">
-   <h1>Cadastrar</h1><br>
+  
+   
 
-            <div class="item">
-               <span class="icon"><ion-icon name="person"></ion-icon></span> 
-                 <label for="name">Nome</label>
-                 <input type="text" name="name" required><br>
+           <div class="cad-card">
+                <div class="cad-cadastro">
+                    
+                    <img src="img/SIMPHA- sem fundo.png" class="cad-image" alt="logo simpha">
+
+                </div>
+
+                <div class="cad-right">
+                    <div class="cad-login">
+                        
+                        <h2>Cadastrar</h2>
+                        <div class="cad">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <label for="usuario"></label>
+                            <input type="email" name="email" placeholder="Email" required><br>
+                        </div>
+
+                        <div class="cad">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
+                            <label for="senha"></label>
+                            <input type="password" name="password" placeholder="Senha" required><br>
+                        </div>
+                        
+                    
+                        <input class="btn" type="submit" value="entrar">
+                    
+
+                    
+
+
+                     </div>
+                </div>
             </div>
-
-            <div class="item">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-				<label for="usuario">Email</label>
-                <input type="email" name="email" required><br>
-            </div>
-
-            <div class="item">
-               <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-			   <label for="senha">Senha</label>
-               <input type="password" name="password" required><br>
-            </div>
-
-           <input class="bt"  type="submit" value="loga">
-
-           <div class="registrar">
-                <a href="index.php">Faça Login</a>
-            </div>
-  </div>
+  
     </form>
     
     

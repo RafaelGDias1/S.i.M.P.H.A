@@ -42,25 +42,25 @@ session_start();
 
             <div class="item">
                 <span class="icon"><ion-icon name="mail"></ion-icon></span> 
-                <label for="email">Email</label>
-                <input type="email" name="email" required>
+                <label for="email"></label>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
 
             <div class="item">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                    <label for="password">Senha</label>
-                    <input type="password" name="password" required>
+                    <label for="password"></label>
+                    <input type="password" name="password" placeholder="Senha" required>
             </div>
 
             
 
-            <input class="bt" type="submit" value="loga">
+            <input class="bt" type="submit" value="entrar">
 
         
             <div class="registrar">
             <a href="cadastrar.php">Ainda não é cadastrado?</a><br>
             </div>
-            <
+            
       </form>
      </div>
   </div>
