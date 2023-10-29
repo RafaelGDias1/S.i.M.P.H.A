@@ -55,29 +55,7 @@
                 </div>
             </div>
   
-=======
-     
-            
 
-            <div class="item">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-				<label for="usuario">Email</label>
-                <input type="email" name="email" required><br>
-            </div>
-
-            <div class="item">
-               <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-			   <label for="senha">Senha</label>
-               <input type="password" name="password" required><br>
-            </div>
-
-           <input class="bt"  type="submit" value="loga">
-
-           <div class="registrar">
-                <a href="index.php">Faça Login</a>
-            </div>
-  </div>
->>>>>>> 58cf1556295663e0e752bcd2b05ba31f9a7c17e9
     </form>
     
     
