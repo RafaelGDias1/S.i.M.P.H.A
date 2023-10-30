@@ -31,16 +31,17 @@
                     <div class="cad-login">
                         
                         <h2>Cadastrar</h2>
+
                         <div class="cad">
                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
                             <label for="usuario"></label>
-                            <input type="email" name="email" placeholder="Email" required><br>
+                            <input type="email" name="email" placeholder="Email" required>
                         </div>
 
                         <div class="cad">
                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
                             <label for="senha"></label>
-                            <input type="password" name="password" placeholder="Senha" required><br>
+                            <input type="password" name="password" placeholder="Senha" required>
                         </div>
                         
                     

@@ -25,7 +25,7 @@
 
             $_SESSION["loggedin"] = true; 
 
-            header("Location: site.php"); 
+            header("Location: pagPH.php"); 
             exit; 
 
         }
@@ -45,45 +45,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
- <script src="buger.js"></script>
+<form method="post" action="telalogin.php">
 
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+           <i class="burges" id="btn"></i> <!--fa fa-bars--> 
+           <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
+        </label>
+        <img src="img/SIMPHA- sem fundo.png" >
 
-<form method="post" action="index.php">
-
-<header>
-
-       <!img src="img/PH-img.png" alt="PH">
-
-    <nav <!--class="navegacao"-- >
-        <div class="buger-menu">
-            <div class="linha1"></div>
-            <div class="linha2"></div>
-            <div class="linha3"></div>
-       </div>
         <ul>
-            <li><a href="#">contato</a></li>
-            <li><a href="#">sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="site.php">Suporte</a></li>
+            <li><a href="telalogin.php">Entrar</a></li>
+            <li><a href="cadastrar.php">Criar uma conta</a></li>
+           
         </ul>
        
     </nav>
 
 
-</header>	  
-
-<main>
 
 
 
 
-</main>
-
-<input class="btnLogin-popup" type="submit" value="entra" name="entra">
 
 
-</form>
-</body>
-</html>
+        </form>
+    </body>
+ </html>

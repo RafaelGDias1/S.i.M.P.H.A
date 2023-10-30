@@ -22,49 +22,46 @@ session_start();
 <body>
    
 
-    <form method="post" action="site.php">
+    <form method="post" action="pagPH.php">
 
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
   <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
 
   
-  <div class="zin"> 
-
-  <span class="icon-saida"><ion-icon name="close-outline"></ion-icon>
-	</span>
-
-
-   <div class="card-l login">
-    <h1>Login</h1>
-
-            
-
-            <div class="item">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span> 
-                <label for="email"></label>
-                <input type="email" name="email" placeholder="Email" required>
-            </div>
-
-            <div class="item">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                    <label for="password"></label>
-                    <input type="password" name="password" placeholder="Senha" required>
-            </div>
-
-            
-
-            <input class="bt" type="submit" value="entrar">
-
-        
-            <div class="registrar">
-            <a href="cadastrar.php">Ainda não é cadastrado?</a><br>
-            </div>
-            
-      </form>
+  <div class="card"> <!--cad-card-->
+     <div class="card-logo"> <!--cad-cadastro-->
+        <img src="img/SIMPHA- sem fundo.png" class="card-image" alt="logo simpha">
      </div>
+
+
+        <div class="card-rigth"> <!--cad-rigth-->
+            <div class="card-login"> <!--cad-login-->
+
+              <h2>Login</h2>
+
+                <div class="darde"> <!--cad-->
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span> 
+                    <label for="email"></label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="darde">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
+                        <label for="password"></label>
+                        <input type="password" name="password" placeholder="Senha" required>
+                </div>
+
+                
+
+                <input class="butao" type="submit" value="entrar"> <!--btn-->
+            
+                <a href="cadastrar.php">Não tenho conta</a>
+
+           </div>
+        </div>
   </div>
     
-
+  </form>
 </body>
 </html>

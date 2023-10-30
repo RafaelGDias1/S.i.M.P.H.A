@@ -6,6 +6,8 @@
 
     require_once "config.php";
 
+    echo htmlspecialchars($_SERVER["PHP_SELF"]);
+
     function logout()
     {
         session_unset();
@@ -21,7 +23,7 @@
 
     if (isset($_POST["logout"])) {
         logout();
-        exit;
+    
     }
 
 ?>
@@ -37,7 +39,7 @@
 <body>
 
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<form method="post" action="pagPH.php">
     <input type="submit" name="logout" value="logout">
 
     <h1>LOGADO</h1>
