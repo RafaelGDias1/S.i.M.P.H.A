@@ -54,7 +54,7 @@ session_start();
                         unset($_SESSION['status_cadastro']);
                         ?>
                         <?php
-                        if($_SESSION['users_existe']);
+                        if($_SESSION['users_existe']):
                         ?>
 
                         <div class="cad">
