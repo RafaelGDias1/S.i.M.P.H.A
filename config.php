@@ -1,17 +1,19 @@
 <?php
-    
 
-    $servername = "localhost";
-    $username = "simpha";
-    $password = "123456";
-    $databesa = "login";
+$servername = "localhost";
+$username = "Simpha";
+$password = "123456";
+$database = "login";
+$config = array();
 
+$mysqli = new mysqli($servername, $username, $password, $database);
 
-    $mysqli = new mysqli($servername, $username, $password, $databesa);
+// Verifica a conexão
+if ($mysqli->connect_error) {
+    die("Falha na conexão: " . $mysqli->connect_error);
+}
 
-    // Verifica a conexão
-    if ($mysqli->error) {
-        die("Falha na conexão: " . $mysqli->error);
-    }
-    
+// Atribui o objeto mysqli à variável $config
+$config = $mysqli;
+
 ?>

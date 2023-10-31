@@ -40,8 +40,15 @@ session_start();
                         <h2>Cadastrar</h2>
 
                             <?php
-                            if($_SESSION['status_cadastro']);
+                            if (isset($_SESSION['status_cadastro'])) {
+                                // A chave 'status_cadastro' está definida, então você pode acessá-la com segurança
+                                $status_cadastro = $_SESSION['status_cadastro'];
+                                // Faça o que for necessário com $status_cadastro
+                            } else {
+                                // A chave 'status_cadastro' não está definida, então você pode tratar o caso em conformidade
+                            }
                             ?>
+                            
 
                         <div class="cad">
                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
@@ -50,12 +57,25 @@ session_start();
                         </div>
 
                         <?php 
-                        endif;
-                        unset($_SESSION['status_cadastro']);
-                        ?>
-                        <?php
-                        if($_SESSION['users_existe']):
-                        ?>
+                        // endif;
+                        // unset($_SESSION['status_cadastro']);
+                        //if($_SESSION['users_existe']):
+                           
+                            if (isset($_SESSION['status_cadastro'])) {
+                                // A chave 'status_cadastro' está definida, faça algo com ela
+                                unset($_SESSION['status_cadastro']);
+                            } else {
+                                // A chave 'status_cadastro' não está definida
+                                // Lide com a situação de acordo com a sua lógica
+                            }
+                            
+                            if (isset($_SESSION['users_existe'])) {
+                                // A chave 'users_existe' está definida, faça algo com ela
+                            } else {
+                                // A chave 'users_existe' não está definida
+                                // Lide com a situação de acordo com a sua lógica
+                            }
+                            ?>
 
                         <div class="cad">
                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
@@ -63,8 +83,21 @@ session_start();
                             <input type="password" name="password" placeholder="Senha" required>
                         </div>
                         <?php
-                        endif;
-                        unset($_SESSION['users_existe']);
+                        if (isset($_SESSION['status_cadastro'])) {
+                            // A chave 'status_cadastro' está definida, você pode acessá-la com segurança
+                            $status_cadastro = $_SESSION['status_cadastro'];
+                            // Faça o que for necessário com $status_cadastro
+                        } else {
+                            // A chave 'status_cadastro' não está definida, então lide com o caso em conformidade
+                        }
+
+                        if (isset($_SESSION['users_existe'])) {
+                            // A chave 'users_existe' está definida, você pode acessá-la com segurança
+                            $users_existe = $_SESSION['users_existe'];
+                            // Faça o que for necessário com $users_existe
+                        } else {
+                            // A chave 'users_existe' não está definida, então lide com o caso em conformidade
+                        }
                         ?>
                     
                         <input class="btn" type="submit" value="entrar">
