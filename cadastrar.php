@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -32,18 +39,33 @@
                         
                         <h2>Cadastrar</h2>
 
+                            <?php
+                            if($_SESSION['status_cadastro']);
+                            ?>
+
                         <div class="cad">
                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
                             <label for="usuario"></label>
                             <input type="email" name="email" placeholder="Email" required>
                         </div>
 
+                        <?php 
+                        endif;
+                        unset($_SESSION['status_cadastro']);
+                        ?>
+                        <?php
+                        if($_SESSION['users_existe']);
+                        ?>
+
                         <div class="cad">
                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
                             <label for="senha"></label>
                             <input type="password" name="password" placeholder="Senha" required>
                         </div>
-                        
+                        <?php
+                        endif;
+                        unset($_SESSION['users_existe']);
+                        ?>
                     
                         <input class="btn" type="submit" value="entrar">
                     

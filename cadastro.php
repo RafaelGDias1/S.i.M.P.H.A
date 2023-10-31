@@ -1,28 +1,41 @@
 <?php
+  session_start();
+    include ('config.php'); 
 
-    require_once "config.php"; 
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $email = mysqli_real_escape_string($config, trim($_POST['email']));
+    $password = mysqli_real_escape_string($config, trim(md5($_POST['password'])));
 
 
-        $sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
+    $sql = "select count(*) as total from users where users = '$users'";
+    $result - mysqli_query($config, $sql);
+    $row = mysqli_fetch_assoc($result);
 
-        $stmt = $conn->prepare($sql);
-        
-        $stmt->bind_param("sss", $name, $email, $hashed_password); 
-
-        if ($stmt->execute()) {
-            echo "Usuário criado com sucesso";
-        } else {
-            echo "Erro: " . $sql . "<br>" . $coon->error;
-        }
-
-        $stmt->close();
-
-
+    if($Row['total'] == 1){
+        $_SESSION['users_existe'] = true;
+        header('Location: cadastrar.php');
+        exit;
     }
-    $conn->close();
+
+    $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password' NOW())";
+
+    if($config->query($sql) == TRUE){
+        $_SESSION['status_cadastro'] = true;
+    }
+
+$config->close();
+
+header('Location: cadastrar.php');
+exit;
+
+
+?>
+
+
+
+
+
+
+
+
+
+    

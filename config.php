@@ -4,13 +4,14 @@
     $servername = "localhost";
     $username = "simpha";
     $password = "123456";
-    $dbname = "login";
+    $databesa = "login";
 
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $mysqli = new mysqli($servername, $username, $password, $databesa);
 
     // Verifica a conexão
-    if ($conn->connect_error) {
-        die("Falha na conexão: " . $conn->connect_error);
+    if ($mysqli->error) {
+        die("Falha na conexão: " . $mysqli->error);
     }
+    
 ?>

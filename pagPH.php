@@ -1,33 +1,8 @@
-<?php
+<?php 
 
-
-
- 
-
-    require_once "config.php";
-
-    echo htmlspecialchars($_SERVER["PHP_SELF"]);
-
-    function logout()
-    {
-        session_unset();
-        session_destroy();
-        header("Location: pagPH.php");
-        exit;
-    }
-
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("Location: site.php");
-        exit;
-    }
-
-    if (isset($_POST["logout"])) {
-        logout();
-    
-    }
+include('protec-pagPH.php');
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -40,11 +15,11 @@
 
 
 <form method="post" action="pagPH.php">
-    <input type="submit" name="logout" value="logout">
 
-    <h1>LOGADO</h1>
+    <h1>LOGADO</h1> <?php echo $_SESSION['id']; ?>
 
+<a href="pag1.php">Sair</a>
   
-  
+</form>
 </body>
 </html>
