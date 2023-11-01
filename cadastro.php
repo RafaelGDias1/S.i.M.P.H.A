@@ -3,7 +3,7 @@
     include('config.php');
 
     $email = mysqli_real_escape_string($config, trim($_POST['email']));
-    $password = mysqli_real_escape_string($config, trim(md5($_POST['password'])));
+    $password = mysqli_real_escape_string($config, trim(($_POST['password'])));
 
     $sql = "SELECT count(*) as total FROM users WHERE email = '$email'";
     $result = mysqli_query($config, $sql);

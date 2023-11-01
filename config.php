@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$username = "Simpha";
+$username = "simpha";
 $password = "123456";
 $database = "login";
 $config = array();

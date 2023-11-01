@@ -13,8 +13,8 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
         $email = $mysqli->real_escape_string($_POST['email']);
         $password = $mysqli->real_escape_string($_POST['password']);
 
-        $sql_code = "SELECT * FROM users WHERE email = '$email' AND password = 'password'"; // vai selecionar dados da tabela users
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
+        $sql_code = "SELECT * FROM users WHERE email = '$email' AND 'password' = '$password'"; // vai selecionar dados da tabela users
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->connect_error);
 
         $quantidade = $sql_query->num_rows;
 
@@ -31,7 +31,7 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
 
         } 
         else{
-          echo "Falha ao logar! E-mail ou senha incorretos";
+          echo "não logado";
         }
       } 
 }    
@@ -50,7 +50,7 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
 <body>
    
 
-    <form method="post" action="telalogin.php">
+    <form method="post" action="pagPH.php">
 
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
