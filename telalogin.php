@@ -13,7 +13,7 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
         $email = $mysqli->real_escape_string($_POST['email']);
         $password = $mysqli->real_escape_string($_POST['password']);
 
-        $sql_code = "SELECT * FROM users WHERE email = '$email' AND 'password' = '$password'"; // vai selecionar dados da tabela users
+        $sql_code = "SELECT * FROM users WHERE email = '$email' AND password = '$password'"; // vai selecionar dados da tabela users
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->connect_error);
 
         $quantidade = $sql_query->num_rows;
@@ -45,51 +45,52 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-   
 
+</body>
+   
+  <main>
     <form method="post" action="pagPH.php">
 
-
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
-  <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
 
-  
-  <div class="card"> <!--cad-card-->
-     <div class="card-logo"> <!--cad-cadastro-->
-        <img src="img/SIMPHA- sem fundo.png" class="card-image" alt="logo simpha">
-     </div>
+    <center>
+      <div class="card"> <!-- cad-card-->
+      <div class="card-logo"> <!--cad-cadastro-->
+        <!-- <img src="img/SIMPHA- sem fundo.png" class="card-image" alt="logo simpha"> !-->
+      </div>
 
 
-        <div class="card-rigth"> <!--cad-rigth-->
-            <div class="card-login"> <!--cad-login-->
+            <div class="card-rigth"> <!--cad-rigth-->
+            <p></p>
+              <div class="card-login"> <!--cad-login-->
 
-              <h2>Login</h2>
+                <h2>Login</h2>
 
-                <div class="darde"> <!--cad-->
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span> 
-                    <label for="email"></label>
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
+                  <div class="darde"> <!--cad-->
+                      <span class="icon"><ion-icon name="mail"></ion-icon></span> 
+                      <label for="email"></label>
+                      <input type="email" name="email" placeholder="E-mail" required>
+                  </div>
 
-                <div class="darde">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                        <label for="password"></label>
-                        <input type="password" name="password" placeholder="Senha" required>
-                </div>
+                  <div class="darde">
+                          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
+                          <label for="password"></label>
+                          <input type="password" name="password" placeholder="Senha" required>
+                  </div>
 
-                
+                  <input class="butao" type="submit" value="entrar"> <!--btn-->
+              
+                  <a href="cadastrar.php">Não tenho conta</a>
 
-                <input class="butao" type="submit" value="entrar"> <!--btn-->
-            
-                <a href="cadastrar.php">Não tenho conta</a>
-
-           </div>
-        </div>
-  </div>
+              </div>
+            </div>
+      </div>
+    </center>
+  </main>
     
   </form>
-</body>
 </html>
