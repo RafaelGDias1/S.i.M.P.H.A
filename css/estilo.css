@@ -355,13 +355,12 @@ margin-bottom: 0.75rem;
 }
  
 ------------------ /*parte de baixo login, cima cadastro*/-------------------------
-
 .card{
   width: 100vw;
-  background: linear-gradient(rgb(0, 4, 7),rgb(6, 68, 97)); /*cor do site*/
-  display: flex;
+  background: #0000; /*cor do site*/
   justify-content: center;
   align-items: center;
+  
 }
 .card-logo{
   background-image: url(../img/SIMPHA-\ sem\ fundo.png);
@@ -423,7 +422,7 @@ margin-bottom: 0.75rem;
   color: rgb(156, 156, 156);
 }
 .darde > input{
-  width: 90%;
+  width: 95%;
   background: transparent;
   border: none;
   border-radius: 10px;
@@ -456,9 +455,16 @@ margin-bottom: 0.75rem;
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px rgb(24, 26, 24);
 }
-.butao:hover{
+.card-login a{
+  font-weight: 1000;
+  color: #04418b;
+}
+.card-login a:hover{
   color: #5d93d1;
-  background: #a9bcd3;
+}
+.butao:hover{
+  color: #ffffff;
+  background: #0073ff;
 }
 @media only screen and (max-width: 950px) { /*para o tamanho do aparelho*/
   .card-login{

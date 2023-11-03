@@ -47,18 +47,16 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
     <title>Login</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
 
-</body>
-   
-  <main>
-    <form method="post" action="pagPH.php">
+  <form method="post" action="pagPH.php">
 
-    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
-    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
+    <script type= "module" src= "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+    <script nomodule src= "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
 
     <center>
-      <div class="card"> <!-- cad-card-->
+    <!--<div class="card">  cad-card-->
       <div class="card-logo"> <!--cad-cadastro-->
         <!-- <img src="img/SIMPHA- sem fundo.png" class="card-image" alt="logo simpha"> !-->
       </div>
@@ -68,27 +66,27 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
 
             <h2>Login</h2>
 
-              <div class="darde"> <!--cad-->
-                <span class="icon"><ion-icon name="mail"></ion-icon></span> 
-                <label for="email"></label>
-                <input type="email" name="email" placeholder="E-mail" required>
-              </div>
+            <div class="darde"> <!--cad-->
+              <span class="icon"><ion-icon name="mail"></ion-icon></span> 
+              <label for="email"></label>
+              <input type="email" name="email" placeholder="E-mail" required>
+            </div>
 
-              <div class="darde">
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                <label for="password"></label>
-                <input type="password" name="password" placeholder="Senha" required>
-              </div>
+            <div class="darde">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
+              <label for="password"></label>
+              <input type="password" name="password" placeholder="Senha" required>
+            </div>
 
-              <input class="butao" type="submit" value="entrar"> <!--btn-->
-          
-              <a href="cadastrar.php">Não tenho conta</a>
+            <input class="butao" type="submit" value="entrar"> <!--btn-->
+        
+            <a href="cadastrar.php">ou<br> Não tenho conta</a>
 
           </div>
         </div>
-      </div>
+    <!--</div> !-->
     </center>
-  </main>
-    
   </form>
+  
+</body>
 </html>
