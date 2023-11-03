@@ -412,7 +412,7 @@ margin-bottom: 0.75rem;
   align-items: flex-start;
   justify-content: center;
   position: relative;
-  border-bottom: 2px solid #f5f8fa;
+  border-bottom: 2px solid #0c85ff;
   margin: 2px 0;
 }
 .darde label{
@@ -423,7 +423,7 @@ margin-bottom: 0.75rem;
   color: rgb(156, 156, 156);
 }
 .darde > input{
-  width: 100%;
+  width: 90%;
   background: transparent;
   border: none;
   border-radius: 10px;
@@ -436,7 +436,7 @@ margin-bottom: 0.75rem;
 }
 .darde .icon{
   position: absolute;
-  right: 5px;
+  right: 10px;
   font-size: 1.2em;
   color: #9ebed1; /*muda a cor dos icon*/
   line-height: 57px;
@@ -455,6 +455,10 @@ margin-bottom: 0.75rem;
   background: #5d93d1;
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px rgb(24, 26, 24);
+}
+.butao:hover{
+  color: #5d93d1;
+  background: #a9bcd3;
 }
 @media only screen and (max-width: 950px) { /*para o tamanho do aparelho*/
   .card-login{

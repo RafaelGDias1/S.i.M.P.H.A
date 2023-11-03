@@ -63,31 +63,29 @@ if(isset($_POST['email']) || isset($_POST['password'])){   //caso exista email o
         <!-- <img src="img/SIMPHA- sem fundo.png" class="card-image" alt="logo simpha"> !-->
       </div>
 
+        <div class="card-rigth"> <!--cad-rigth-->
+          <div class="card-login"> <!--cad-login-->
 
-            <div class="card-rigth"> <!--cad-rigth-->
-            <p></p>
-              <div class="card-login"> <!--cad-login-->
+            <h2>Login</h2>
 
-                <h2>Login</h2>
-
-                  <div class="darde"> <!--cad-->
-                      <span class="icon"><ion-icon name="mail"></ion-icon></span> 
-                      <label for="email"></label>
-                      <input type="email" name="email" placeholder="E-mail" required>
-                  </div>
-
-                  <div class="darde">
-                          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                          <label for="password"></label>
-                          <input type="password" name="password" placeholder="Senha" required>
-                  </div>
-
-                  <input class="butao" type="submit" value="entrar"> <!--btn-->
-              
-                  <a href="cadastrar.php">Não tenho conta</a>
-
+              <div class="darde"> <!--cad-->
+                <span class="icon"><ion-icon name="mail"></ion-icon></span> 
+                <label for="email"></label>
+                <input type="email" name="email" placeholder="E-mail" required>
               </div>
-            </div>
+
+              <div class="darde">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
+                <label for="password"></label>
+                <input type="password" name="password" placeholder="Senha" required>
+              </div>
+
+              <input class="butao" type="submit" value="entrar"> <!--btn-->
+          
+              <a href="cadastrar.php">Não tenho conta</a>
+
+          </div>
+        </div>
       </div>
     </center>
   </main>
