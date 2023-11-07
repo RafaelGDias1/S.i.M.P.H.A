@@ -1,5 +1,6 @@
-<?php 
-
+<?php
+ 
+      
 include('protec-pagPH.php');
 
 ?>
@@ -16,7 +17,7 @@ include('protec-pagPH.php');
 
 <form method="post" action="pagPH.php">
 
-    <h1>LOGADO</h1> <?php //echo $_SESSION['id']; ?>
+    <h1>LOGADO</h1> 
 
 <a href="pag1.php">Sair</a>
   

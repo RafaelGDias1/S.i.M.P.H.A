@@ -1,15 +1,3 @@
-<?php
-
-if(!isset($_SESSION)){
-    session_start();
-}
-
-session_destroy();
-
-header("Location: telalogin.php")
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
