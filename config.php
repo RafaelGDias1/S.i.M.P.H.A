@@ -1,19 +1,21 @@
 <?php
 
-$servername = "localhost";
-$username = "simpha";
-$password = "123456";
-$database = "login";
-$config = array();
+$servidor = "localhost";
+$usuario = "johntccph";
+$senha = "Rafa5151";
+$banco = "projetotccph";
 
-$mysqli = new mysqli($servername, $username, $password, $database);
+
+try{
+
+$conexao = new PDO ("mysql:host=$servidor; dbname=$banco",
+$usuario,
+$senha);
 
 // Verifica a conexão
-if ($mysqli->connect_error) {
-    die("Falha na conexão: " . $mysqli->connect_error);
+return $conexao;
+}catch(PDOException $e){
+ echo '<p>' .$e->getMessage(). '</p>';
 }
-
-// Atribui o objeto mysqli à variável $config
-$config = $mysqli;
 
 ?>
