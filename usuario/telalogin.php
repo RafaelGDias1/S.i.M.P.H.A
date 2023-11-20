@@ -27,7 +27,7 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 if(($result_email) AND ($result_email->rowCount() !=0)){
  $row_email = $result_email->fetch(PDO::FETCH_ASSOC);
   var_dump($row_email);
-  if(password_verify($dados[senha_us],$row_email['senha_us'])){
+  if(password_verify($dados['senha_us'],$row_email['senha_us'])){
     echo "Usuário logadp";
   }else{
     $_SESSION['msg'] = "Erro: Senha inválida(o)!";
