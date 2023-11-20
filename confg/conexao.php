@@ -12,7 +12,7 @@ $conn = new PDO ("mysql:host=localhost; dbname=projetotccph",'johntccpph','Rafa5
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Verifica a conexão
-echo "conectado";
+//cho "conectado";
 $result = $conn->query("SELECT * FROM tb_usuario")->fetchAll();
 
 

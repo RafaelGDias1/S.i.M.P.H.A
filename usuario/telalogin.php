@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once ('./conexao.php');
+include_once ('../confg/conexao.php');
 ?>
 
 <?php
@@ -27,8 +27,13 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 if(($result_email) AND ($result_email->rowCount() !=0)){
  $row_email = $result_email->fetch(PDO::FETCH_ASSOC);
   var_dump($row_email);
+  if(password_verify($dados[senha_us],$row_email['senha_us'])){
+    echo "Usuário logadp";
+  }else{
+    $_SESSION['msg'] = "Erro: Senha inválida(o)!";
+  }
 }else{
-$_SESSION['msg'] = "Erro: Usuário ou senha inválida!";
+$_SESSION['msg'] = "Erro: Usuário inválida(o)!";
 }
 
  }
