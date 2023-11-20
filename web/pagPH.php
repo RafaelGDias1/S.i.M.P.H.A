@@ -1,6 +1,12 @@
 <?php 
+session_start();
+ob_start();
+include_once ('../confg/conexao.php');
 
-include('../usuario/protec-pagPH.php');
+if((!isset($_SESSION['id_email'])) AND (!isset($_SESSION['email']))){
+    $_SESSION['msg'] = "Erro: Necessário fazer login";
+ header("location: ./usuario/telalogin.php");
+}
 
 ?>
 <!DOCTYPE html>
@@ -14,9 +20,9 @@ include('../usuario/protec-pagPH.php');
 <body>
 
 
-<form method="post" action="pagPH.php">
 
-    <h1>LOGADO</h1> <?php //echo $_SESSION['id']; ?>
+
+    <h1>LOGADO</h1> 
 
 <a href="pag1.php">Sair</a>
   

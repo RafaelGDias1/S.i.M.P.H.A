@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 include_once ('../confg/conexao.php');
 ?>
 
@@ -10,39 +11,7 @@ include_once ('../confg/conexao.php');
 ?>
 
 
-<?php  
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
- 
 
- if(!empty($dados['entrar'])){ 
-  var_dump($dados);
-  $query_email = "SELECT id_email, email, senha_us /*selecionar dados da tabela*/
-  FROM tb_usuario /*usar tabela (tal)*/
-  WHERE email =:email  /*escolher colucar e valor */
-  LIMIT 1";
- $result_email = $conn->prepare($query_usuario);
- $result_email->bindParam(':email',$dados['email'], PDO::PARAM_STR);
- $result_email->execute();
-
-if(($result_email) AND ($result_email->rowCount() !=0)){
- $row_email = $result_email->fetch(PDO::FETCH_ASSOC);
-  var_dump($row_email);
-  if(password_verify($dados['senha_us'],$row_email['senha_us'])){
-    echo "Usuário logadp";
-  }else{
-    $_SESSION['msg'] = "Erro: Senha inválida(o)!";
-  }
-}else{
-$_SESSION['msg'] = "Erro: Usuário inválida(o)!";
-}
-
- }
-
- if(isset($_SESSION['msg'])){
-  echo $_SESSION['msg'];
-  unset($_SESSION['msg']);
- }
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,6 +25,42 @@ $_SESSION['msg'] = "Erro: Usuário inválida(o)!";
 <body>
 
 <main>
+
+<?php  
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+ 
+
+ if(!empty($dados['entrar'])){ 
+  //var_dump($dados);
+  $query_email = "SELECT id_email, email, senha_us /*selecionar dados da tabela*/
+  FROM tb_usuario /*usar tabela (tal)*/
+  WHERE email =:email  /*escolher colucar e valor */
+  LIMIT 1";
+ $result_email = $conn->prepare($query_email);
+ $result_email->bindParam(':email',$dados['email'], PDO::PARAM_STR);
+ $result_email->execute();
+
+if(($result_email) AND ($result_email->rowCount() !=0)){
+ $row_email = $result_email->fetch(PDO::FETCH_ASSOC);
+  //var_dump($row_email);
+  if(password_verify($dados['senha_us'],$row_email['senha_us'])){
+    $_SESSION['id_email'] = $row_email['id_email'];
+    $_SESSION['email'] = $row_email['email'];
+    header("location: ../../web/pagPH.php");
+  }else{
+    $_SESSION['msg'] = "Erro: Senha ou usuário invalido(a)!";
+  }
+}else{
+$_SESSION['msg'] = "Erro: Usuário ou senha inválido(a)!";
+}
+
+ }
+
+ if(isset($_SESSION['msg'])){
+  echo $_SESSION['msg'];
+  unset($_SESSION['msg']);
+ }
+?>
     <form method="post" action="">
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
@@ -77,19 +82,19 @@ $_SESSION['msg'] = "Erro: Usuário inválida(o)!";
                   <div class="darde"> <!--cad-->
                       <span class="icon"><ion-icon name="mail"></ion-icon></span> 
                       <label for="email"></label>
-                      <input type="email" name="email" placeholder="E-mail" required>
+                      <input type="email" name="email" placeholder="E-mail" required value="<?php if(isset($dados['email'])){ echo $dados['email'];}?>">
                   </div>
 
                   <div class="darde">
                           <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                          <label for="password"></label>
-                          <input type="password" name="senha_us" placeholder="Senha" required>
+                          <label for="senha_us"></label>
+                          <input type="password" name="senha_us" placeholder="Senha" required >
                   </div>
           
                
                   
 
-                  <input class="butao" type="submit" value="entrar"> <!--btn-->
+                  <input class="butao" type="submit" value="entrar" name="entrar"> <!--btn-->
               
                   <a href="../registro/cadastrar.php">Não tenho conta</a>
 
