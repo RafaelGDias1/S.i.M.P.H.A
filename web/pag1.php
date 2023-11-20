@@ -1,12 +1,6 @@
 <?php
 
-if(!isset($_SESSION)){
-    session_start();
-}
 
-session_destroy();
-
-header("Location: telalogin.php")
 
 ?>
 
@@ -18,11 +12,11 @@ header("Location: telalogin.php")
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="./../css/estilo.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<form method="post" action="telalogin.php">
+<form method="post" action="../usuario/telalogin.php">
 
     <nav>
         <input type="checkbox" id="check">
@@ -30,12 +24,13 @@ header("Location: telalogin.php")
            <i class="burges" id="btn"></i> <!--fa fa-bars--> 
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
-        <img src="img/SIMPHA- sem fundo.png" >
+        <img src="../img/SIMPHA- sem fundo.png" >
 
         <ul>
-            <li><a href="telalogin.php">Entrar</a></li>
-            <li><a href="cadastrar.php">Cria uma conta</a></li>
+            <li><a href="../usuario/telalogin.php">Entrar</a></li>
+            <li><a href="../registro/cadastrar.php">Cria uma conta</a></li>
            
+            
         </ul>
        
     </nav>
@@ -49,7 +44,7 @@ header("Location: telalogin.php")
     <footer>
         <div id="fundo_content">
             <div id="fundo_contacts">
-                <h1>Logo</h1>
+            <img src="../img/SIMPHA- sem fundo.png" >
                 <p>alalalalalalala</p>
 
                 <div id="fundo_social_media">

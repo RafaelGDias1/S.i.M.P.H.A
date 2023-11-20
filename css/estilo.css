@@ -134,7 +134,7 @@ text-decoration: none;
   grid-template-columns: repeat(4, 1fr); /*vai deixa as 4 cores em coluna*/
   padding: 3rem 3.5rem;
 }
-#fundo_contacts h1{
+#fundo_contacts img{
 margin-bottom: 0.75rem;
 }
 #fundo_social_media {
@@ -233,6 +233,9 @@ margin-bottom: 0.75rem;
   padding: 3rem 2rem;
   }
 }
+
+                        /*parte de baixo login, cima footer*/
+
 .cad-card{
   width: 100vw;
   height: 100vh;
