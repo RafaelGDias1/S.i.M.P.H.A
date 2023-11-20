@@ -1,3 +1,23 @@
+<?php
+include_once './conexao.php';
+?>
+
+<?php
+//exemplo cripitografar a senha
+//echo password_hash(478965, PASSWORD_DEFAULT);
+
+?>
+
+
+<?php  
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+ var_dump($dados);
+
+ if(!empty($dados['entrar'])){
+  var_dump($dados);
+ }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,7 +30,7 @@
 <body>
 
 <main>
-    <form method="post" action="../web/pagPH.php">
+    <form method="post" action="">
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
     <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
@@ -37,13 +57,11 @@
                   <div class="darde">
                           <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
                           <label for="password"></label>
-                          <input type="password" name="password" placeholder="Senha" required>
+                          <input type="password" name="senha_us" placeholder="Senha" required>
                   </div>
-          <?php if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
-                  <div class="">
-                    Usuário ou senha inválida(s)
-                  </div>
-                   <?php } ?>
+          
+               
+                  
 
                   <input class="butao" type="submit" value="entrar"> <!--btn-->
               

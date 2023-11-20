@@ -1,5 +1,5 @@
 <?php
-  include('config.php');
+  include('./config.php');
   
       //VERIFICA SE ESTÁ VINDO INFORMAÇÕES VIA POST
       if($_POST) {
@@ -9,7 +9,7 @@
           $senha_us =trim($_POST['senha_us']);
          
           
-         if(is_numeric($id)) {
+         if(is_numeric($id_email)) {
           $sql = "
           UPDATE users SET
           tipo_email = '$tipo',

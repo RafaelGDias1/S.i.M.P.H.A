@@ -135,7 +135,10 @@ text-decoration: none;
   padding: 3rem 3.5rem;
 }
 #fundo_contacts img{
-margin-bottom: 0.75rem;
+  width: 200px; /*tamanho img*/
+  top: -34px; /*altura da imagem*/
+  left: 7%; /*distancia da imagem*/
+margin-bottom: 0.50rem; /*espaçamento entre a img*/
 }
 #fundo_social_media {
   display: flex;

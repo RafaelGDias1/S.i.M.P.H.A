@@ -45,6 +45,7 @@
         <div id="fundo_content">
             <div id="fundo_contacts">
             <img src="../img/SIMPHA- sem fundo.png" >
+            
                 <p>alalalalalalala</p>
 
                 <div id="fundo_social_media">
