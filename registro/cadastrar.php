@@ -80,7 +80,7 @@
                         <input class="btn" type="submit" value="entrar">
                     
 
-                    <a href="telalogin.php"> Já tenho uma conta</a>
+                    <a href="../usuario/telalogin.php"> Já tenho uma conta</a>
 
 
                      </div>
