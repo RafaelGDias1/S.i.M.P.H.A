@@ -4,11 +4,7 @@ ob_start();
 include_once ('../confg/conexao.php');
 ?>
 
-<?php
-//exemplo cripitografar a senha
-//echo password_hash(478965, PASSWORD_DEFAULT);
 
-?>
 
 
 
@@ -28,7 +24,6 @@ include_once ('../confg/conexao.php');
 
 <?php  
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
- 
 
  if(!empty($dados['entrar'])){ 
   //var_dump($dados);
@@ -43,10 +38,13 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 if(($result_email) AND ($result_email->rowCount() !=0)){
  $row_email = $result_email->fetch(PDO::FETCH_ASSOC);
   //var_dump($row_email);
+
   if(password_verify($dados['senha_us'],$row_email['senha_us'])){
+var_dump($row_email);
+ $dados ['senha_us'] = password_hash($dados['senha_us'], PASSWORD_DEFAULT);
     $_SESSION['id_email'] = $row_email['id_email'];
     $_SESSION['email'] = $row_email['email'];
-    header("location: ../../web/pagPH.php");
+    header("Location: ../../web/pagPH.php");
   }else{
     $_SESSION['msg'] = "Erro: Senha ou usuário invalido(a)!";
   }

@@ -1,41 +1,32 @@
 <?php
-  include('./config.php');
+  /*include("./config.php");
   
-      //VERIFICA SE ESTÁ VINDO INFORMAÇÕES VIA POST
-      if($_POST) {
-          //passando todos os itens do post para as sua variaveis
-          $id_email = trim($_POST['id_email']);
-          $email = trim($_POST['email']);
-          $senha_us =trim($_POST['senha_us']);
-         
-          
-         if(is_numeric($id_email)) {
-          $sql = "
-          UPDATE users SET
-          tipo_email = '$tipo',
-          email_email = '$email',
-          autor_email = '$autor'
-          WHERE id_email  = $id_email
-          ";
-          } else {
-          $sql = "
-          INSERT INTO users (email, senha_us ) VALUES
-          (
-              '$email',
-              '$senha_us',
-              '',
-              '0'
-          )
-          ";
-      }
-      $query = $conexao->prepare($sql);
-      $query->execute(); 
-      }
-      header('Location: ./web/pagPH.php');
-      exit;
-  
-  
-  
+  session_start();
+    
+$email = mysqli_real_escape_string($conn,trim($_POST['email']));
+$senha_us =  mysqli_real_escape_string($conn,trim(md5($_POST['senha_us'])));
+
+$sql = "select count(*) as total from usuario where tb_usuario = '$email'";
+
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_assoc($resilt);
+
+if($row['total'] == 1) {
+ $_SESSION['usuario_existe'] = true;
+ header('Location: cadastrar.php');
+ exit;
+}
+
+$sql = "INSERT INTO tb_usuario( id, email, senha_us) VALUES ('email','senha_us''1)";
+
+if($conn->query($sql) === true){
+    $_SESSION ['status_cadastro'] = true;
+}
+
+$conn->close();
+
+header('Location: cadastrar.php');
+exit;
 
    ?>
 

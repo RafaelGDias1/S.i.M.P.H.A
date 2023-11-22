@@ -1,27 +1,31 @@
 <?php
+require ('../confg/conexao.php');
+session_start();
+ob_start();
 
-/*include('./config.php');
-/*  echo '<pre>';
-    print_r($_POST);
-    echo '</pre>'; 
-    //VERIFICA SE ESTÁ VINDO INFORMAÇÕES VIA POST
-    if($_POST) {
-      $id = $_POST['id'];
-      $querySelect = "SELECT * FROM tb_usuario  WHERE id_email= $id_email";
-      $resultado = $conexao->query($querySelect);
-      $email = $resultado->fetch();
-      
-      $id = $email["id"];
-      $email = $email["email"];
-      $senha_us = $email["senha_us"];
+$CadEntrar = filter_input(INPUT_POST, 'CadEntrar', FILTER_SANITIZE_STRING);
+if($CadEntrar){
+    include_once ('../confg/conexao.php');
+    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+   // var_dump($dados);
+  $dados['senha_us'] = password_hash($dados['senha_us'], PASSWORD_DEFAULT);
 
+  $result_email = "INSERT INTO tb_usuario (id, email, senha_us) VALUES (
+    '".$dados['id']."', 
+    '".$dados['email']."', 
+    '".$dados['senha_us']."')";
 
-    }else{
-      $id = "";
-      $email = "";
-      $senha_us = "";
-    
-    }*/
+  $resultado_users = mysqli_query($conn , $result_email);
+  if(mysqli_insert_id($conn)){
+    $_SESSION['msg'] = "cadastro feito com sucesso!";
+    header("Location: ../usuario/telalogin.php");
+
+  }else{
+    $_SESSION['msg'] = "Erro ao cadastra!";
+
+  }
+}
+
 
 
 ?>
@@ -37,17 +41,12 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    
+<script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
+  <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
     <form method="post" action="cadastro.php">
 
     
-
-    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
-  <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
-  
-
-  
-   
+ 
 
            <div class="cad-card">
                 <div class="cad-cadastro">
@@ -61,7 +60,13 @@
                         
                         <h2>Cadastrar</h2>
 
-                            
+                           <?php
+                           if(isset($_SESSION['msg'])){
+                           echo $_SESSION['msg'];
+                           unset ($_SESSION['msg']);
+
+                           }
+                           ?> 
                             
 
                         <div class="cad">
@@ -74,18 +79,17 @@
                         <div class="cad">
                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
                             <label for="senha"></label>
-                            <input type="password" name="password" placeholder="Senha" required>
+                            <input type="password" name="senha_us" placeholder="Senha" required>
                         </div>
                         
-                        <input class="btn" type="submit" value="entrar">
+                        <input class="btn" type="submit" value="entrar" name="CadEntrar">
                     
 
                     <a href="../usuario/telalogin.php"> Já tenho uma conta</a>
 
-
                      </div>
                 </div>
-            </div>
+       </div>
   
 
     </form>

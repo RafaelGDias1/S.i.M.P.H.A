@@ -1,7 +1,7 @@
 <?php
  session_start();
  ob_start();
- unset($_SESSION['id_email'], $_SESSION['email']);
+ unset($_SESSION['id_email'], $_SESSION['id_email']);
 
  header("location: ");
 
