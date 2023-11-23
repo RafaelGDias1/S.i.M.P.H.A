@@ -1,28 +1,41 @@
 <?php
-
-//include('./config.php');
-//echo '<pre>';
-//print_r($_POST);
-//echo '</pre>';
-
-//$email = $_POST['email'];
-//$senha_us = $_POST['senha_us'];
+session_start();
+include_once ('../confg/conexao.php');
 
 
-//$querySelect = "SELECT * FROM tb_usuario  WHERE email = '$email' and senha_us  = '$senha_us'";
-//$resultado = $conexao->query($querySelect);
-//$usuario = $resultado->fetchAll();
-//$n = count($usuario);
+$entrar = filter_input(INPUT_POST, 'entrar', FILTER_DEFAULT);
+if($entrar){
+$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+//echo "$email - $senha";
+if((!empty($email)) AND (!empty($senha))){
+  password_hash($senha, PASSWORD_DEFAULT);
+  $result_email = $conn->query( "SELECT id_email, email, senha_us FROM tb_usuario WHERE email='$email' ");
+    $resultado_email = mysqli_query($email, $result_email);
+    if($result_email){
 
-//if ($n == 1 or $email =="admin" and $senha_us="123" ){
-  //session_start();
-  //$_SESSION['email'] = $users[0]['email'];
- // $_SESSION['senha_us'] = $users[0]['senha_us'];
-  //$_SESSION['autenticado'] = 'SIM';
- // header('Location: ./web/pag1.php');
-//}else{
-  //header('Location: ./usuario/telalogin.php');
-//}
+      $row_email = mysqli_fetch_assoc($mysql_result, $resultado_email);
+
+      if(password_verify($senha_us, $row_email['senha'])){
+        
+        $_SESSION['id_email'] = $row_email['id_email'];
+
+        $_SESSION ['email'] = $row_email ['email'];
+
+        header("Locatiion: ../web/pagPH.php");
+      }else{
+        $_SESSION['msg'] = "Login e senha incorreto";
+        header("Location: telalogin.php");
+      }
+    }
+}else{
+  $_SESSION['msg'] = "Login e senha incorreto";
+  header("Location: telalogin.php");
+}
+}else{
+  $_SESSION['msg'] = "Página não encontrada";
+  header("Location: telalogin.php");
+}
 
 
 ?>

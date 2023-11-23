@@ -1,12 +1,12 @@
 <?php 
 session_start();
 ob_start();
-include_once ('../confg/conexao.php');
-
-if((!isset($_SESSION['id_email'])) AND (!isset($_SESSION['email']))){
-    $_SESSION['msg'] = "Erro: Necessário fazer login";
- header("location: ./usuario/telalogin.php");
-}
+ if(!empty($_SESSION['id_email'])){
+    echo "ola".$_SESSION['email'].",vindo";
+ }else{
+    $_SESSION['msg'] = "ARES";
+    header("Location: ./usuario/telalogin.php");
+ }
 
 ?>
 <!DOCTYPE html>

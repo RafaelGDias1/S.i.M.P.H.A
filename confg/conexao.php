@@ -9,8 +9,8 @@ $banco = "projetotccph";
 try{
 
 $conn = new PDO ("mysql:host=localhost; dbname=projetotccph",'johntccpph','Rafa5151');
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+//$row = $result->fetch_array(MYSQLI_ASSOC);
 // Verifica a conexão
 //echo "conectado";
 $result = $conn->query("SELECT * FROM tb_usuario")->fetchAll();

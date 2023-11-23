@@ -1,11 +1,11 @@
 <?php
  session_start();
  ob_start();
- unset($_SESSION['id_email'], $_SESSION['id_email']);
+ unset($_SESSION['id_email'], $_SESSION['email']);
+ 
+$_SESSION['msg'] = "Deslogado"
 
- header("location: ");
-
-
+header('Location: ./usuario/telalogin.php');
 ?>
 
 
