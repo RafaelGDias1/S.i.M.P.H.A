@@ -1,11 +1,11 @@
-<?php
+<?php 
  session_start();
  ob_start();
  unset($_SESSION['id_email'], $_SESSION['email']);
  
 $_SESSION['msg'] = "Deslogado"
 
-header('Location: ./usuario/telalogin.php');
+
 ?>
 
 
@@ -28,7 +28,7 @@ header('Location: ./usuario/telalogin.php');
            <i class="burges" id="btn"></i> <!--fa fa-bars--> 
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
-        <img src="../img/SIMPHA- sem fundo.png" >
+       <img src="../img/SIMPHA- sem fundo.png">
 
         <ul>
             <li><a href="../usuario/telalogin.php">Entrar</a></li>

@@ -1,14 +1,14 @@
 <?php
-  /*include("./config.php");
+  include("../confg/conexao.php");
   
   session_start();
     
-$email = mysqli_real_escape_string($conn,trim($_POST['email']));
-$senha_us =  mysqli_real_escape_string($conn,trim(md5($_POST['senha_us'])));
+$email = mysqli_real_escape_string($dados,trim($_POST['email']));
+$senha_us =  mysqli_real_escape_string($dados,trim(md5($_POST['senha_us'])));
 
 $sql = "select count(*) as total from usuario where tb_usuario = '$email'";
 
-$result = mysqli_query($conn,$sql);
+$result = mysqli_query($dados,$sql);
 $row = mysqli_fetch_assoc($resilt);
 
 if($row['total'] == 1) {
@@ -19,7 +19,7 @@ if($row['total'] == 1) {
 
 $sql = "INSERT INTO tb_usuario( id, email, senha_us) VALUES ('email','senha_us''1)";
 
-if($conn->query($sql) === true){
+if($dados->query($sql) === true){
     $_SESSION ['status_cadastro'] = true;
 }
 

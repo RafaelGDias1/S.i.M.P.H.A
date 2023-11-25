@@ -28,8 +28,12 @@ nav{
 nav > img{
   width: 150px;
   position: absolute;
+  margin: 0px;
   top: -34px; /*altura da imagem*/
   left: 7%; /*distancia da imagem*/
+}
+nav > img:hover{
+  cursor: pointer;
 }
 nav > ul{
   float: right;
@@ -256,7 +260,18 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   flex-direction: column;
 }
 .cad-image{
-  width: 35vw;
+  width: 25vh;
+  padding-bottom: 250px;
+  margin-left: 100px;
+}
+.desc-simpha p{
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  color: #f7f7f7;
+  font-size: 30px;
+  display: flex;
+  width: 350px;
+  margin-left: -430px;
 }
 .cad-right{
   width: 50vw;
@@ -264,6 +279,12 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cad-right a{
+  color: #f7f7f7;
+}
+.cad-right a:hover{
+  color: #c9c3ce;
 }
 .cad-login{
   background: transparent;

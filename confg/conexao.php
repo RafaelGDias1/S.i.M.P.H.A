@@ -8,7 +8,7 @@ $banco = "projetotccph";
 
 try{
 
-$conn = new PDO ("mysql:host=localhost; dbname=projetotccph",'johntccpph','Rafa5151');
+$conn = new PDO ("mysql:host=localhost; dbname=projetotccph",'johntccph','Rafa5151');
 
 //$row = $result->fetch_array(MYSQLI_ASSOC);
 // Verifica a conexão

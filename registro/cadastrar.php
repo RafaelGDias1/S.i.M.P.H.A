@@ -45,13 +45,19 @@ if($CadEntrar){
   <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
     <form method="post" action="cadastro.php">
 
-    
- 
 
            <div class="cad-card">
                 <div class="cad-cadastro">
-                    
+
                     <img src="../img/SIMPHA- sem fundo.png" class="cad-image" alt="logo simpha">
+
+                </div>
+
+                <div class="desc-simpha">
+
+                  <p>SIMPHA, seu sistema de monitoramento 
+                    de PH na tela do seu aparelho! 
+                  </p>
 
                 </div>
 
