@@ -20,9 +20,7 @@ include_once ('../confg/conexao.php');
 </head>
 <body>
 
-<main>
-
-
+  <main>
     <form method="post" action="validaLogin.php">
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
@@ -47,24 +45,24 @@ include_once ('../confg/conexao.php');
                 }
                 ?>
 
-                  <div class="darde"> <!--cad-->
-                      <span class="icon"><ion-icon name="mail"></ion-icon></span> 
-                      <label for="email"></label>
-                      <input type="email" name="email" placeholder="E-mail" required value="<?php if(isset($dados['email'])){ echo $dados['email'];}?>">
-                  </div>
+                <div class="darde"> <!--cad-->
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span> 
+                    <label for="email"></label>
+                    <input type="email" name="email" placeholder="E-mail" required value="<?php if(isset($dados['email'])){ echo $dados['email'];}?>">
+                </div>
 
-                  <div class="darde">
-                          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                          <label for="senha_us"></label>
-                          <input type="password" name="senha" placeholder="Senha" required >
-                  </div>
-          
-               
-                  
-
-                  <input class="butao" type="submit" value="entrar" name="entrar"> <!--btn-->
+                <div class="darde">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
+                        <label for="senha_us"></label>
+                        <input type="password" name="senha" placeholder="Senha" required >
+                </div>
+        
               
-                  <a href="../registro/cadastrar.php">Não tenho conta</a>
+                
+
+                <input class="butao" type="submit" value="entrar" name="entrar"> <!--btn-->
+            
+                <a href="../registro/cadastrar.php">Não tenho conta</a>
 
               </div>
             </div>

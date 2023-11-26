@@ -18,7 +18,8 @@ body{
   letter-spacing: 1px;
 }
 main{
-  height: 80vh;
+  height: 100vh;
+  background: linear-gradient(rgb(44, 85, 122),rgb(25, 93, 124)); /*cor do site*/
 }
 nav{
   width: 100%;
@@ -265,10 +266,10 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   margin-left: 100px;
 }
 .desc-simpha p{
-  text-align: center;
+  text-align: left;
   font-family: 'Noto Sans', sans-serif;
   color: #f7f7f7;
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   width: 350px;
   margin-left: -430px;
@@ -284,7 +285,7 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   color: #f7f7f7;
 }
 .cad-right a:hover{
-  color: #c9c3ce;
+  color: #0073ff;
 }
 .cad-login{
   background: transparent;
@@ -298,9 +299,14 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   box-shadow: 0px 10px 40px black;
 }
 .cad-login > h2{
-  color: #d8e7e7;
+  color: #f7f7f7;
   font-weight: 800;
   margin: 0;
+}
+.cad-login > h2:hover{
+  color: #0073ff;
+  transition: 0.5s;
+  cursor: pointer;
 }
 .cad {
   width: 100%;
@@ -317,10 +323,14 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   margin-bottom: 10px;
 }
 .cad > input::placeholder{
-  color: #dddada;
+  color: #f7f7f7;
+}
+.cad > input:hover::placeholder{
+  opacity: 30%;
+  transition: 0.5s;
 }
 .cad > input{
-  width: 100%;
+  width: 95%;
   background: transparent;
   border: none;
   border-radius: 10px;
@@ -348,7 +358,7 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 3px;
-  color: #cecdcd;
+  color: #f7f7f7;
   background: #5d93d1;
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px rgb(24, 26, 24);
@@ -422,14 +432,14 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   box-shadow: 7px 5px 15px 1px black;
 }
 .card-login > h2{
-  color: #5d93d1;
+  color: #f7f7f7;
   font-weight: 800;
   margin: 0;
 }
 .card-login > h2:hover{
   cursor: pointer;
-  color: #026666;
-  transition: 0.9s;
+  color: #5d93d1;
+  transition: 0.5s;
 }
 .darde {
   width: 100%;
@@ -446,7 +456,11 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   margin-bottom: 10px;
 }
 .darde > input::placeholder{
-  color: rgb(156, 156, 156);
+  color: #f7f7f7;
+}
+.darde > input:hover::placeholder{
+  opacity: 30%;
+  transition: 0.5s;
 }
 .darde > input{
   width: 95%;
@@ -455,7 +469,7 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   border-radius: 10px;
   outline: none;
   font-size: 12pt;
-  color: rgb(63, 62, 62);
+  color: rgb(243, 242, 242);
   font-weight: 600;
   padding: 15px;
   box-sizing: border-box;
@@ -484,7 +498,7 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
 }
 .card-login a{
   font-weight: 1000;
-  color: #04418b;
+  color: #f7f7f7;
 }
 .card-login a:hover{
   color: #5d93d1;

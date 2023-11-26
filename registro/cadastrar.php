@@ -55,8 +55,8 @@ if($CadEntrar){
 
                 <div class="desc-simpha">
 
-                  <p>SIMPHA, seu sistema de monitoramento 
-                    de PH na tela do seu aparelho! 
+                  <p>O sistema SIMPHA é um sistema de monitoramento 
+                    de PH prático, na tela do seu aparelho! 
                   </p>
 
                 </div>
@@ -64,38 +64,38 @@ if($CadEntrar){
                 <div class="cad-right">
                     <div class="cad-login">
                         
-                        <h2>Cadastrar</h2>
+                      <h2>Cadastrar</h2>
 
-                           <?php
-                           if(isset($_SESSION['msg'])){
-                           echo $_SESSION['msg'];
-                           unset ($_SESSION['msg']);
+                        <?php
+                          if(isset($_SESSION['msg'])){
+                          echo $_SESSION['msg'];
+                          unset ($_SESSION['msg']);
 
-                           }
-                           ?> 
+                          }
+                        ?> 
                             
 
-                        <div class="cad">
-                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                            <label for="usuario"></label>
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
+                      <div class="cad">
+                          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                          <label for="usuario"></label>
+                          <input type="email" name="email" placeholder="Email" required>
+                      </div>
 
 
-                        <div class="cad">
-                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                            <label for="senha"></label>
-                            <input type="password" name="senha_us" placeholder="Senha" required>
-                        </div>
-                        
-                        <input class="btn" type="submit" value="entrar" name="CadEntrar">
-                    
+                      <div class="cad">
+                          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
+                          <label for="senha"></label>
+                          <input type="password" name="senha_us" placeholder="Senha" required>
+                      </div>
+                      
+                      <input class="btn" type="submit" value="entrar" name="CadEntrar">
+                  
 
-                    <a href="../usuario/telalogin.php"> Já tenho uma conta</a>
+                      <a href="../usuario/telalogin.php"> Já tenho uma conta</a>
 
-                     </div>
+                    </div>
                 </div>
-       </div>
+              </div>
   
 
     </form>
