@@ -13,7 +13,7 @@ if($CadEntrar){
   $result_email = "INSERT INTO tb_usuario (id, email, senha_us) VALUES (
     '".$dados['id']."', 
     '".$dados['email']."', 
-    '".$dados['senha_us']."')";
+    '".$dados['senha']."')";
 
   $resultado_users = mysqli_query($conn , $result_email);
   if(mysqli_insert_id($conn)){

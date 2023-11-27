@@ -6,7 +6,7 @@
    //var_dump($dados);
    $query_email = "SELECT id_email, email, senha_us /*selecionar dados da tabela
    FROM tb_usuario usar tabela (tal)
-   WHERE email =:email  /*escolher colucar e valor 
+   WHERE email =:email  escolher colucar e valor 
    LIMIT 1";
   $result_email = $conn->prepare($query_email);
   $result_email->bindParam(':email',$dados['email'], PDO::PARAM_STR);
@@ -35,4 +35,4 @@
    echo $_SESSION['msg'];
    unset($_SESSION['msg']);
   }
- ?>*/
+ ?>

@@ -1,41 +1,40 @@
 <?php
 session_start();
-include_once ('../confg/conexao.php');
+include_once ("../confg/conexao.php");
 
 
-$entrar = filter_input(INPUT_POST, 'entrar', FILTER_DEFAULT);
-if($entrar){
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+$btloga = filter_input(INPUT_POST, 'btloga', FILTER_SANITIZE_STRING);
+if($btloga){
+ 
+$usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
 $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-//echo "$email - $senha";
-if((!empty($email)) AND (!empty($senha))){
+//echo "$usuario - $senha";
+if((!empty($usuario)) AND (!empty($senha))){
   password_hash($senha, PASSWORD_DEFAULT);
-  $result_email = $conn->query( "SELECT id_email, email, senha_us FROM tb_usuario WHERE email='$email' ");
-    $resultado_email = mysqli_query($email, $result_email);
-    if($result_email){
+  $result_usuario = "SELECT id, nome, email, usuario, senha FROM tb_usuario WHERE usuario='$usuario' LIMIT 1 ";
+    $resultado_usuario = mysqli_query($conn, $result_usuario);
+    if( $resultado_usuario){
+      $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 
-      $row_email = mysqli_fetch_assoc($mysql_result, $resultado_email);
-
-      if(password_verify($senha_us, $row_email['senha'])){
-        
-        $_SESSION['id_email'] = $row_email['id_email'];
-
-        $_SESSION ['email'] = $row_email ['email'];
-
-        header("Locatiion: ../web/pagPH.php");
-      }else{
+      if(password_verify($senha, $row_usuario ['senha'])){
+       $_SESSION['id'] = $row_usuario['id'];
+       $_SESSION ['nome'] = $row_usuario ['nome'];
+       $_SESSION['email'] = $row_usuario['email'];
+        header("Location: ../web/pagPH.php");
+      }
+      else{
         $_SESSION['msg'] = "Login e senha incorreto";
-        header("Location: telalogin.php");
+       header("Location: telalogin.php");
       }
     }
-}else{
-  $_SESSION['msg'] = "Login e senha incorreto";
-  header("Location: telalogin.php");
 }
-}else{
+else{
+
   $_SESSION['msg'] = "Página não encontrada";
   header("Location: telalogin.php");
 }
+}
+
 
 
 ?>

@@ -1,11 +1,11 @@
 <?php 
  session_start();
- ob_start();
- unset($_SESSION['id_email'], $_SESSION['email']);
+ unset($_SESSION['id'], $_SESSION ['nome'],  $_SESSION['email']);
  
-$_SESSION['msg'] = "Deslogado"
 
+$_SESSION['msg'] = "Deslogado";
 
+header("Location: ")
 ?>
 
 

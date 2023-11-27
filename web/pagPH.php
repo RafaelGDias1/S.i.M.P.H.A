@@ -1,12 +1,13 @@
 <?php 
 session_start();
-ob_start();
- if(!empty($_SESSION['id_email'])){
-    echo "ola".$_SESSION['email'].",vindo";
- }else{
-    $_SESSION['msg'] = "ARES";
-    header("Location: ./usuario/telalogin.php");
+
+ if(!empty($_SESSION['id'])){
+    echo "OLa ". $_SESSION ['nome']." , bem";
  }
+ else{
+    $_SESSION['msg'] = "Deslogado";
+    header("Location: .../usuario/telalogin.php");
+  }
 
 ?>
 <!DOCTYPE html>

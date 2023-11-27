@@ -1,7 +1,5 @@
 <?php
 session_start();
-ob_start();
-include_once ('../confg/conexao.php');
 ?>
 
 
@@ -21,7 +19,7 @@ include_once ('../confg/conexao.php');
 <body>
 
   <main>
-    <form method="post" action="validaLogin.php">
+    <form method="POST" action="./validaLogin.php">
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
     <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script> 
@@ -48,19 +46,19 @@ include_once ('../confg/conexao.php');
                 <div class="darde"> <!--cad-->
                     <span class="icon"><ion-icon name="mail"></ion-icon></span> 
                     <label for="email"></label>
-                    <input type="email" name="email" placeholder="E-mail" required value="<?php if(isset($dados['email'])){ echo $dados['email'];}?>">
+                    <input type="test" name="usuario" placeholder="E-mail" required>
                 </div>
 
                 <div class="darde">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>		
-                        <label for="senha_us"></label>
+                        <label for="senha"></label>
                         <input type="password" name="senha" placeholder="Senha" required >
                 </div>
         
               
                 
 
-                <input class="butao" type="submit" value="entrar" name="entrar"> <!--btn-->
+                <input class="butao" type="submit" value="Acessar" name="btloga"> <!--btn-->
             
                 <a href="../registro/cadastrar.php">Não tenho conta</a>
 
