@@ -41,6 +41,10 @@ session_start();
                   echo $_SESSION['msg'];
                   unset($_SESSION['msg']);
                 }
+                if (isset($_SESSION['msgcard'])){
+                  echo $_SESSION['msgcard'];
+                  unset($_SESSION['msgcard']);
+                }
                 ?>
 
                 <div class="darde"> <!--cad-->

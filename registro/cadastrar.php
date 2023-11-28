@@ -7,18 +7,19 @@ $CadEntrar = filter_input(INPUT_POST, 'CadEntrar', FILTER_SANITIZE_STRING);
 if($CadEntrar){
     include_once ('../confg/conexao.php');
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-   // var_dump($dados);
-  $dados['senha_us'] = password_hash($dados['senha_us'], PASSWORD_DEFAULT);
+   var_dump($dados);
+  $dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
 
-  $result_email = "INSERT INTO tb_usuario (id, email, senha_us) VALUES (
-    '".$dados['id']."', 
-    '".$dados['email']."', 
+  $result_usuario = "INSERT INTO tb_usuario ( nome, email, usuario, senha) VALUES (
+     '".$dados['nome']."', 
+     '".$dados['email']."', 
+    '".$dados['usuario']."', 
     '".$dados['senha']."')";
 
-  $resultado_users = mysqli_query($conn , $result_email);
+  $resultado_usuario = mysqli_query($conn , $result_usuario);
   if(mysqli_insert_id($conn)){
-    $_SESSION['msg'] = "cadastro feito com sucesso!";
-    header("Location: ../usuario/telalogin.php");
+    $_SESSION['msgcard'] = "cadastro feito com sucesso!";
+    header("Location: ../web/pagPH.php");
 
   }else{
     $_SESSION['msg'] = "Erro ao cadastra!";
@@ -43,7 +44,7 @@ if($CadEntrar){
 <body>
 <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
   <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
-    <form method="post" action="cadastro.php">
+    <form method="post" action="../web/pagPH.php">
 
 
            <div class="cad-card">
@@ -67,18 +68,22 @@ if($CadEntrar){
                       <h2>Cadastrar</h2>
 
                         <?php
-                          if(isset($_SESSION['msg'])){
-                          echo $_SESSION['msg'];
-                          unset ($_SESSION['msg']);
+                          if(isset($_SESSION['msgcard'])){
+                          echo $_SESSION['msgcard'];
+                          unset ($_SESSION['msgcard']);
 
                           }
                         ?> 
-                            
+                              <div class="cad">
+                          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                          <label for="usuario"></label>
+                          <input type="text" name="nome" placeholder="Nome" required>
+                      </div>
 
                       <div class="cad">
                           <span class="icon"><ion-icon name="mail"></ion-icon></span>
                           <label for="usuario"></label>
-                          <input type="email" name="email" placeholder="Email" required>
+                          <input type="email" name="usuario" placeholder="Email" required>
                       </div>
 
 

@@ -1,5 +1,5 @@
 <?php
-  include("../confg/conexao.php");
+  /*include("../confg/conexao.php");
   
   session_start();
     
@@ -26,7 +26,7 @@ if($conn->query($sql) === true){
 $conn->close();
 
 header('Location: cadastrar.php');
-exit;
+exit;*/
 
    ?>
 

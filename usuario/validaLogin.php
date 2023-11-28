@@ -11,7 +11,7 @@ $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 //echo "$usuario - $senha";
 if((!empty($usuario)) AND (!empty($senha))){
   password_hash($senha, PASSWORD_DEFAULT);
-  $result_usuario = "SELECT id, nome, email, usuario, senha FROM tb_usuario WHERE usuario='$usuario' LIMIT 1 ";
+  $result_usuario = "SELECT  nome, email, usuario, senha FROM tb_usuario WHERE usuario='$usuario' LIMIT 1 ";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
     if( $resultado_usuario){
       $row_usuario = mysqli_fetch_assoc($resultado_usuario);

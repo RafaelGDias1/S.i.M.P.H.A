@@ -6,7 +6,7 @@ session_start();
  }
  else{
     $_SESSION['msg'] = "Deslogado";
-    header("Location: .../usuario/telalogin.php");
+   // header("Location: .../usuario/telalogin.php");
   }
 
 ?>
