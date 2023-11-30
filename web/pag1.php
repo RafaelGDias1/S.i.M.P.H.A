@@ -1,7 +1,7 @@
 <?php 
  session_start();
  ob_start();
- unset($_SESSION['id_email'], $_SESSION['email']);
+ unset($_SESSION['email'], $_SESSION['senha_us']);
  
 $_SESSION['msg'] = "Deslogado"
 
@@ -20,7 +20,8 @@ $_SESSION['msg'] = "Deslogado"
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<form method="post" action="../usuario/telalogin.php">
+
+<form method="post" action="../web/usuario.php">
 
     <nav>
         <input type="checkbox" id="check">

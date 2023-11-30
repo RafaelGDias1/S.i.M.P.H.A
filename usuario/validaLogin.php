@@ -10,7 +10,8 @@ $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 //echo "$email - $senha";
 if((!empty($email)) AND (!empty($senha))){
   password_hash($senha, PASSWORD_DEFAULT);
-  $result_email = $conn->query( "SELECT id_email, email, senha_us FROM tb_usuario WHERE email='$email' ");
+  $result_email = $conn->query( "SELECT email, senha_us FROM tb_usuario WHERE email='$email' ");
+  
     $resultado_email = mysqli_query($email, $result_email);
     if($result_email){
 

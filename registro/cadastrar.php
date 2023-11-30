@@ -1,5 +1,6 @@
+
 <?php
-require ('../confg/conexao.php');
+
 session_start();
 ob_start();
 
@@ -10,22 +11,21 @@ if($CadEntrar){
    // var_dump($dados);
   $dados['senha_us'] = password_hash($dados['senha_us'], PASSWORD_DEFAULT);
 
-  $result_email = "INSERT INTO tb_usuario (id, email, senha_us) VALUES (
-    '".$dados['id']."', 
+  $result_email = "INSERT INTO tb_usuario ( email, senha_us) VALUES (
+    '".$dados['']."', 
     '".$dados['email']."', 
     '".$dados['senha_us']."')";
 
-  $resultado_users = mysqli_query($conn , $result_email);
+  $resultado_email = mysqli_query($conn , $result_email);
   if(mysqli_insert_id($conn)){
     $_SESSION['msg'] = "cadastro feito com sucesso!";
-    header("Location: ../usuario/telalogin.php");
+    header("Location: ../web/pagPH.php");
 
   }else{
     $_SESSION['msg'] = "Erro ao cadastra!";
 
   }
 }
-
 
 
 ?>
@@ -43,7 +43,7 @@ if($CadEntrar){
 <body>
 <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
   <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
-    <form method="post" action="cadastro.php">
+    <form method="POST" action="../web/pagPH.php">
 
 
            <div class="cad-card">

@@ -5,7 +5,7 @@ ob_start();
     echo "ola".$_SESSION['email'].",vindo";
  }else{
     $_SESSION['msg'] = "ARES";
-    header("Location: ./usuario/telalogin.php");
+    //header("Location: ./usuario/telalogin.php");
  }
 
 ?>

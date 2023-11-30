@@ -391,7 +391,7 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
 }
 }
  
------------------- /*parte de baixo login, cima cadastro*/-------------------------
+ /*parte de baixo login, cima cadastro*/
 .card{
   width: 100vw;
   background: #0000; /*cor do site*/
@@ -459,8 +459,8 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   color: #f7f7f7;
 }
 .darde > input:hover::placeholder{
+  transition: 2s;
   opacity: 30%;
-  transition: 0.5s;
 }
 .darde > input{
   width: 95%;
