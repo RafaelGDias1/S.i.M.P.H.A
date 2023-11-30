@@ -1,5 +1,5 @@
 <?php
-  include("../confg/conexao.php");
+ /* include("../confg/conexao.php");
   
   session_start();
     
@@ -27,7 +27,7 @@ $conn->close();
 
 header('Location: cadastrar.php');
 exit;
-
+*/
    ?>
 
 
