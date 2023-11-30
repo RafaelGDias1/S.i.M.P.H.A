@@ -1,12 +1,12 @@
 <?php 
 session_start();
 
- if(!empty($_SESSION['id'])){
+ if(!empty($_SESSION['usuario'])){
     echo "OLa ". $_SESSION ['nome']." , bem";
  }
  else{
     $_SESSION['msg'] = "Deslogado";
-   // header("Location: .../usuario/telalogin.php");
+   
   }
 
 ?>
@@ -20,7 +20,29 @@ session_start();
 </head>
 <body>
 
+<?php 
+$servidor = "localhost";
+$usuario = "johntccpph";
+$senha = "Rafa5151";
+$dbname = "projetotccph";
 
+
+
+
+$connph = mysqli_connect ($servidor, $usuario, $senha, $dbname );
+
+$db = mysqli_select_db($connph, "projetotccph");
+
+$sql = mysqli_query($connph, "SELECT * FROM phreading") or die( 
+    mysqli_error($connph) //caso haja um erro na consulta 
+  );
+
+  while($connph = mysqli_fetch_assoc($sql)) { 
+    echo "-----------------------------------------<br />"; 
+    echo "ph:".$connph["ph"]."<br />"; 
+    echo "hora:".$connph["hora"]."<br />"; 
+  }
+?>
 
 
     <h1>LOGADO</h1> 

@@ -17,7 +17,7 @@ if((!empty($usuario)) AND (!empty($senha))){
       $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 
       if(password_verify($senha, $row_usuario ['senha'])){
-       $_SESSION['id'] = $row_usuario['id'];
+      // $_SESSION['id'] = $row_usuario['id'];
        $_SESSION ['nome'] = $row_usuario ['nome'];
        $_SESSION['email'] = $row_usuario['email'];
         header("Location: ../web/pagPH.php");
