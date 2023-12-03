@@ -20,6 +20,7 @@ if((!empty($usuario)) AND (!empty($senha))){
       // $_SESSION['id'] = $row_usuario['id'];
        $_SESSION ['nome'] = $row_usuario ['nome'];
        $_SESSION['email'] = $row_usuario['email'];
+       $_SESSION['usuario'] = $row_usuario['usuario'];
         header("Location: ../web/pagPH.php");
       }
       else{

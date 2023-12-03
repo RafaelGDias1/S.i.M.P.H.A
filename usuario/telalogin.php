@@ -1,4 +1,5 @@
 <?php
+include_once("../confg/conexao.php");
 session_start();
 ?>
 

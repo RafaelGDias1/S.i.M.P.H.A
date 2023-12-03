@@ -1,25 +1,25 @@
 <?php
-require ('../confg/conexao.php');
+//require ('../confg/conexao.php');
 session_start();
 ob_start();
 
 $CadEntrar = filter_input(INPUT_POST, 'CadEntrar', FILTER_SANITIZE_STRING);
 if($CadEntrar){
     include_once ('../confg/conexao.php');
-    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-   var_dump($dados);
-  $dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
+    $conn = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+   //var_dump($conn);
+  $conn['senha'] = password_hash($conn['senha'], PASSWORD_DEFAULT);
 
   $result_usuario = "INSERT INTO tb_usuario ( nome, email, usuario, senha) VALUES (
-     '".$dados['nome']."', 
-     '".$dados['email']."', 
-    '".$dados['usuario']."', 
-    '".$dados['senha']."')";
+     '".$conn['nome']."', 
+     '".$conn['email']."', 
+    '".$conn['usuario']."', 
+    '".$conn['senha']."')";
 
   $resultado_usuario = mysqli_query($conn , $result_usuario);
   if(mysqli_insert_id($conn)){
     $_SESSION['msgcard'] = "cadastro feito com sucesso!";
-    header("Location: ../web/pagPH.php");
+    header("Location: ../usuario/telalogin.php");
 
   }else{
     $_SESSION['msg'] = "Erro ao cadastra!";
@@ -44,7 +44,7 @@ if($CadEntrar){
 <body>
 <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
   <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
-    <form method="post" action="../web/pagPH.php">
+    <form method="post" action="..//usuario/telalogin.php">
 
 
            <div class="cad-card">
@@ -93,7 +93,7 @@ if($CadEntrar){
                           <input type="password" name="senha_us" placeholder="Senha" required>
                       </div>
                       
-                      <input class="btn" type="submit" value="entrar" name="CadEntrar">
+                      <input class="btn" type="submit" value="loga" name="CadEntrar">
                   
 
                       <a href="../usuario/telalogin.php"> Já tenho uma conta</a>
