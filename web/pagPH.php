@@ -22,12 +22,27 @@ session_start();
 </head>
 <body>
 <nav>
+
+
+<?php 
+include_once("../confg/conexao.php");
+//session_start();
+
+ if(!empty($_SESSION['usuario'])){
+    echo "OLa ". $_SESSION ['nome']." , bem";
+ }
+ else{
+    $_SESSION['msg'] = "Deslogado";
+   
+  }
+
+?>
         <input type="checkbox" id="check">
         <label for="check">
            <i class="burges" id="btn"></i> <!--fa fa-bars--> 
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
-        
+
        <img src="../img/SIMPHA- sem fundo.png">
 
         <ul>
@@ -59,9 +74,10 @@ $sql = mysqli_query($connph, "SELECT * FROM phreading") or die(
   );
 
   while($connph = mysqli_fetch_assoc($sql)) { 
-    echo "-----------------------------------------<br />"; 
-    echo "ph:".$connph["ph"]."<br />"; 
-    echo "hora:".$connph["hora"]."<br />"; 
+
+    echo "<table borde='1'>"; 
+    echo "<td>ph:".$connph["ph"]."<td> <br/>"; 
+    echo "<td>hora:".$connph["hora"]." <td><br/>"; 
   }
 ?>
 

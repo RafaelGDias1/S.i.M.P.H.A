@@ -1,6 +1,6 @@
 <?php
 //require ('../confg/conexao.php');
-session_start();
+//session_start();
 ob_start();
 
 $CadEntrar = filter_input(INPUT_POST, 'CadEntrar', FILTER_SANITIZE_STRING);
@@ -16,8 +16,8 @@ if($CadEntrar){
     '".$conn['usuario']."', 
     '".$conn['senha']."')";
 
-  $resultado_usuario = mysqli_query($conn , $result_usuario);
-  if(mysqli_insert_id($conn)){
+  $resultado_usuario = mysqli_query($dados , $result_usuario);
+  if(mysqli_insert_id($dados)){
     $_SESSION['msgcard'] = "cadastro feito com sucesso!";
     header("Location: ../usuario/telalogin.php");
 
