@@ -57,10 +57,12 @@ include_once("../confg/conexao.php");
     <main>
 
     <?php 
+
 $servidor = "localhost";
 $usuario = "johntccpph";
 $senha = "Rafa5151";
 $dbname = "projetotccph";
+
 
 
 
@@ -76,8 +78,8 @@ $sql = mysqli_query($connph, "SELECT * FROM phreading") or die(
   while($connph = mysqli_fetch_assoc($sql)) { 
 
     echo "<table borde='1'>"; 
-    echo "<td>ph:".$connph["ph"]."<td> <br/>"; 
-    echo "<td>hora:".$connph["hora"]." <td><br/>"; 
+    echo "<tr>ph:".$connph["ph"]."<tr> <br/>"; 
+    echo "<tr>hora:".$connph["hora"]." <tr><br/><br/>"; 
   }
 ?>
 
