@@ -28,12 +28,12 @@ header("Location: ")
            <i class="burges" id="btn"></i> <!--fa fa-bars--> 
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
-       <img src="../img/SIMPHA- sem fundo.png">
+       <img src="../img/SYMPHA - LOGO 2 1.png">
 
         <ul>
             <li><a href="../usuario/telalogin.php">Entrar</a></li>
             <li><a href="../registro/cadastrar.php">Cria uma conta</a></li>
-           
+            <li><a href="../registro/cadastrar.php">Suporte</a></li>
             
         </ul>
        
@@ -48,9 +48,9 @@ header("Location: ")
     <footer>
         <div id="fundo_content">
             <div id="fundo_contacts">
-            <img src="../img/SIMPHA- sem fundo.png" >
+          
             
-                <p>alalalalalalala</p>
+                <p>Siga nas redes</p>
 
                 <div id="fundo_social_media">
                   <a href="#" class="fundo-link" id="instagram">
@@ -66,51 +66,7 @@ header("Location: ")
                   </a>
                 </div>
             </div>
-            <ul class="fundo-list">
-                <li>
-                    <h3>Blog</h3>
-                </li>
-                <li>
-                    <a href="#" class="fundo-link">Tech</a>
-                </li>
-                <li>
-                    <a href="#" class="fundo-link">Adventures</a>
-                </li>
-                <li>
-                    <a href="#" class="fundo-link">Music</a>
-                </li>
-            </ul>
-            <ul class="fundo-list">
-                <li>
-                    <h3>Products</h3>
-                </li>
-                <li>
-                    <a href="#" class="fundo-link">App</a>
-                </li>
-                <li>
-                    <a href="#" class="fundo-link">Desktop</a>
-                </li>
-                <li>
-                    <a href="#" class="fundo-link">Cloud</a>
-                </li>
-            </ul>
-
-            <div id="fundo_subscribe">
-                <h3>Subscribe</h3>
-                <p>lalalalalallalalalaalla</p>
-                <div id="input_group">
-                  <input type="email" id="email">
-                  <button>
-                  <i class="fa-regular fa-envelope"></i>
-
-                  </button>
-                </div>
-            </div>
         </div>
-     <div id="fundo_copyrigth">
-        &#169
-        2023 all rights reserved
-     </div>
     </footer>
 
 

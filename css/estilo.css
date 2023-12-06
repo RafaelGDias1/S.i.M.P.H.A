@@ -2,7 +2,7 @@
 
 :root{
   --color--neutral-0: #0e0c0c;
-  --color--neutral-10: #171717;
+  --color--neutral-10: #010E54;
   --color--neutral-30: #a8a29e;
   --color--neutral-40: #f5f5f5;
 }
@@ -19,20 +19,21 @@ body{
 }
 main{
   height: 100vh;
-  background: linear-gradient(rgb(44, 85, 122),rgb(25, 93, 124)); /*cor do site*/
+  background: linear-gradien #DAEAF7; /*cor do site*/
   padding: 3%;
 }
 nav{
   width: 100%;
   height: 80px;
-  background: #7baee9;
+  background: #010E54;
 }
 nav > img{
-  width: 150px;
+  height: 632px;
+  width: 632px;
   position: absolute;
   margin: 0px;
-  top: -34px; /*altura da imagem*/
-  left: 7%; /*distancia da imagem*/
+  top: -46px; /*altura da imagem*/
+  left: 1%; /*distancia da imagem*/
 }
 nav > img:hover{
   cursor: pointer;
@@ -48,7 +49,7 @@ nav > ul > li{
 }
 nav > ul > li > a{
   position: relative;
-  color: #026666; /*Mudar a cor da letra*/
+  color: #DAEAF7; /*Mudar a cor da letra*/
   font-size: 18px;
   padding: 5px 0;
   text-transform: uppercase;
@@ -60,7 +61,7 @@ nav > ul > li > a::before{
   bottom: 0;
   height: 3px;
   width: 100%;
-  background: #bdd4f7; /*Mudar a cor do curso*/
+  background: #DAEAF7; /*Mudar a cor do curso*/
   transform: scaleX(0);
   transform-origin: right;
   transition: transform .4s linear;
@@ -148,7 +149,9 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
 }
 #fundo_social_media {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /*espacamento das redes*/
   margin-top: 1.5rem;
 }
 #fundo_social_media .fundo-link {
