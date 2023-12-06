@@ -82,6 +82,7 @@ $sql = mysqli_query($connph, "SELECT * FROM phreading") or die(
     echo "<tr>hora:".$connph["hora"]." <tr><br/><br/>"; 
   }
 ?>
+<script src="../js/js.js"></script>
 
 </main>
 
