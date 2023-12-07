@@ -1,7 +1,3 @@
-so copiar e colar para o arduino 
-
-
-
 
 #include <Wire.h>
 #include <LiquidCrystal.h> // Adiciona a biblioteca "LiquidCrystal" ao projeto

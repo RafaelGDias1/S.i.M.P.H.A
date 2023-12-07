@@ -9,6 +9,7 @@
 body{
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
+  background-color: #DAEAF7;
 }
 *{
   padding: 0px;
@@ -372,18 +373,6 @@ justify-content: center;
   background: #0000; /*cor do site*/
   justify-content: center;
   align-items: center;
-  
-}
-.card-logo{
-  background-image: url(../img/SIMPHA-\ sem\ fundo.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  height:30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .card-image{
   width: 35vw;
@@ -405,6 +394,10 @@ justify-content: center;
   padding: 30px 35px;
   border-radius: 20px;
   box-shadow: 7px 5px 15px 1px black;
+  background-color: #010E54;
+}
+.card-login a{
+  width: 100%;
 }
 .card-login > h2{
   color: #f7f7f7;
@@ -417,7 +410,7 @@ justify-content: center;
   transition: 0.5s;
 }
 .darde {
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -438,6 +431,7 @@ justify-content: center;
   transition: 0.5s;
 }
 .darde > input{
+  padding-top: 30px;
   width: 95%;
   background: transparent;
   border: none;
@@ -446,7 +440,7 @@ justify-content: center;
   font-size: 12pt;
   color: rgb(243, 242, 242);
   font-weight: 600;
-  padding: 15px;
+  padding: 20px;
   box-sizing: border-box;
 }
 .darde .icon{
@@ -457,19 +451,20 @@ justify-content: center;
   line-height: 57px;
 }
 .butao{
-  width: 100%;
-  padding: 16px 0px;
-  margin: 25px;
+  margin-top: 20px;
+  width: 55%;
+  padding: 15px 0px;
   border:none;
   border-radius: 8px;
   outline: none;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 3px;
-  color: #ffffff;
-  background: #5d93d1;
+  color: #010E54;
+  background-color: #DAEAF7;
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px rgb(24, 26, 24);
+  text-align: center;
 }
 .card-login a{
   font-weight: 1000;
@@ -479,8 +474,7 @@ justify-content: center;
   color: #5d93d1;
 }
 .butao:hover{
-  color: #ffffff;
-  background: #0073ff;
+  color: #0073ff;
 }
 @media only screen and (max-width: 950px) { /*para o tamanho do aparelho*/
   .card-login{
