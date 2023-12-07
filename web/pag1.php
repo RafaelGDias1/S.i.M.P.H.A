@@ -28,6 +28,7 @@ header("Location: ")
            <i class="burges" id="btn"></i> <!--fa fa-bars--> 
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
+
        <img src="../img/SYMPHA - LOGO 2 1.png">
 
         <ul>
@@ -41,15 +42,20 @@ header("Location: ")
 
 <main>
 
+<p>O sistema SIMPHA é um sistema de monitoramento de PH prático, na tela do seu aparelho!</p>
+<input type="submit" value=" SAIBA MAIS!" name="saiba">
 
-
+<img src="../img/Mulher no Shape.png" alt="mulher segurando celular">
+<div class="cll">
+<img src="../img/Aplicativo SIMPHA no Shape.png" alt="celular">
+</div>
 </main>
 
     <footer>
         <div id="fundo_content">
             <div id="fundo_contacts">
           
-            
+    
                 <p>Siga nas redes</p>
 
                 <div id="fundo_social_media">

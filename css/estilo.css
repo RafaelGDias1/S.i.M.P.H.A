@@ -17,22 +17,18 @@ body{
   text-decoration: none;
   letter-spacing: 1px;
 }
-main{
-  height: 100vh;
-  background: linear-gradien #DAEAF7; /*cor do site*/
-  padding: 3%;
-}
+
 nav{
   width: 100%;
   height: 80px;
   background: #010E54;
 }
 nav > img{
-  height: 632px;
-  width: 632px;
+/*height: 632px;*/
+  width: 100%px;
   position: absolute;
   margin: 0px;
-  top: -46px; /*altura da imagem*/
+  top: -16px; /*altura da imagem*/
   left: 1%; /*distancia da imagem*/
 }
 nav > img:hover{
@@ -40,12 +36,12 @@ nav > img:hover{
 }
 nav > ul{
   float: right;
-  margin-right: 25px;
+  margin-right: 35px;
 }
 nav > ul > li{
   display: inline-block;
   line-height: 50px; /*altura da lista*/
-  margin: 0 10px; /*distancia da lista*/
+  margin: 0 20px; /*distancia da lista*/
 }
 nav > ul > li > a{
   position: relative;
@@ -125,6 +121,34 @@ nav > ul > li > a{
   display: block;
 }
 }
+                                /*parte de cima navegação, baixo main*/
+
+main{
+  height: 100vh;
+  background: linear-gradien #DAEAF7; /*cor do site*/
+  padding: 3%;
+}
+main >img{
+  width: 470px;
+  position: absolute;
+  margin: 0px;
+  top: center; /* altura da imagem*/
+  right: 5px; /*distancia da imagem*/
+}
+ main >p{
+  text-align:start;
+  color: #010E54;
+ }
+
+.cll{
+
+  width: 470px;
+  position: absolute;
+  margin: 0px;
+  top: center; /* altura da imagem*/
+  right: 60px; /*distancia da imagem*/
+ }
+
 
                           /*parte de cima navegação*/
 
@@ -133,7 +157,12 @@ footer{
   color: var(--color--neutral-40) ;
 }
 .fundo-link{
+  color: var(--color--neutral-30);
+  transition: all 0.4s;
 text-decoration: none;
+display: flex ;
+align-items: center;
+justify-content: center;
 }
 #fundo_content{
   background-color: var(--color--neutral-10);
@@ -141,17 +170,13 @@ text-decoration: none;
   grid-template-columns: repeat(4, 1fr); /*vai deixa as 4 cores em coluna*/
   padding: 3rem 3.5rem;
 }
-#fundo_contacts img{
-  width: 200px; /*tamanho img*/
-  top: -34px; /*altura da imagem*/
-  left: 7%; /*distancia da imagem*/
-margin-bottom: 0.50rem; /*espaçamento entre a img*/
-}
+
 #fundo_social_media {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 3rem; /*espacamento das redes*/
+  gap: 6rem; /*espacamento das redes*/
   margin-top: 1.5rem;
 }
 #fundo_social_media .fundo-link {
@@ -179,60 +204,7 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
 #whatsapp{
   background-color: #25d366;
 }
-.fundo-list{
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  list-style: none;
-}
-.fundo-list .fundo-link{
-  color: var(--color--neutral-30);
-  transition: all 0.4s;
-}
-.fundo-list .fundo-link:hover{ 
-  color: #7f37c9;
-}
-#fundo_subscribe {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-#fundo_subscribe p {
-  color: var(--color--neutral-30);
-}
-#input_group {
-  display: flex;
-  align-items: center;
-  background-color: var(--color--neutral-0) ;
-  border-radius: 4px;
-}
-#input_group input{
-  all: unset;
-  padding: 0.75rem;
-  width: 100%;
-}
-#input_group button{
-  background-color: #7f37c9;
-  border: none;
-  color: var(--color--neutral-40);
-  padding: 0px 1.25rem;
-  font-size: 1.25rem;
-  height: 100%;
-  border-radius: 0px 4px 4px 0px;
-  cursor: pointer;
-  transition: all 0.4s;
-}
-#input_group button:hover{
-  opacity: 0.8;
-}
-#fundo_copyright{
-  display: flex;
-  justify-content: center;
-  background-color: var(--color--neutral-0);
-  font-size: 0.9rem;
-  padding: 1.5rem;
-  font-weight: 100;
-}
+
 @media screen and (max-width: 768px) {
   #fundo_content{
     grid-template-columns: repeat(2, 1fr);
@@ -246,7 +218,7 @@ margin-bottom: 0.50rem; /*espaçamento entre a img*/
   }
 }
 
-                        /*parte de baixo login, cima footer*/
+                        /*parte de baixo cadastro, cima footer*/
 
 .cad-card{
   width: 100vw;

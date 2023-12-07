@@ -50,7 +50,7 @@ if($CadEntrar){
            <div class="cad-card">
                 <div class="cad-cadastro">
 
-                    <img src="../img/SIMPHA- sem fundo.png" class="cad-image" alt="logo simpha">
+                    <img src="../img/SYMPHA - LOGO 2 1.png" class="cad-image" alt="logo simpha">
 
                 </div>
 

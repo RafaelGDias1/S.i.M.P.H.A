@@ -28,12 +28,12 @@ session_start();
     <center>
       <div class="card"> <!-- cad-card-->
       <div class="card-logo"> <!--cad-cadastro-->
-        <!-- <img src="img/SIMPHA- sem fundo.png" class="card-image" alt="logo simpha"> !-->
+        <!-- <img src="../img/SYMPHA - LOGO 2 1.png" class="card-image" alt="logo simpha"> -->
       </div>
 
 
             <div class="card-rigth"> <!--cad-rigth-->
-            <p></p>
+          <img src="../img/SYMPHA - LOGO 2 1.png" class="card-image" alt="logo simpha"> 
               <div class="card-login"> <!--cad-login-->
 
                 <h2>Login</h2>
