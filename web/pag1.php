@@ -19,7 +19,7 @@ header("Location: ")
     <link rel="stylesheet" href="./../css/estilo.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
 <form method="post" action="../usuario/telalogin.php">
 
     <nav>
@@ -29,7 +29,7 @@ header("Location: ")
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
 
-       <img src="../img/SYMPHA - LOGO 2 1.png">
+       <a href="../web/pag1.php"><img src="../img/SYMPHA - LOGO 2 1.png"></a>
 
         <ul>
             <li><a href="../usuario/telalogin.php">Entrar</a></li>
@@ -42,40 +42,62 @@ header("Location: ")
 
 <main>
 
-<p>O sistema SIMPHA é um sistema de monitoramento de PH prático, na tela do seu aparelho!</p>
-<input type="submit" value=" SAIBA MAIS!" name="saiba">
+  <div class="fisrt">
+    <p>O sistema <b>SIMPHA</b> é um sistema de <b>monitoramento de PH prático</b>, na tela do seu aparelho! </p>
+    <input type="submit" value=" SAIBA MAIS!" name="saiba">
 
-<img src="../img/Mulher no Shape.png" alt="mulher segurando celular">
-<div class="cll">
-<img src="../img/Aplicativo SIMPHA no Shape.png" alt="celular">
-</div>
+    <img src="../img/Mulher no Shape.png" alt="mulher segurando celular">
+  </div>
+
 </main>
+
+  <div class="cll">
+  <img src="../img/Aplicativo SIMPHA no Shape.png" alt="celular">
+
+  <p><b>Simples e Eficiente: </b><br>
+      Nossa plataforma digital é projetada para ser intuitiva, tornando o monitoramento de PH fácil. 
+      <input type="submit" value="QUERO BAIXAR!" name="baixar">
+  </p>
+  </div>
+
+
+  <div class="homi">
+
+    <p><b>Experimento Grátis: <br></b>
+          Baixe o SIMPHA agora e experimente <b>GRATUITAMENTE</b> por 7 dias. <br>
+          <input type="submit" value="BAIXAR AGORA!" name="baixar-agora">
+        </p>
+
+        <img src="../img/homi no shape.png" alt="Homem segurando o celular">
+  </div>
+
 
     <footer>
         <div id="fundo_content">
             <div id="fundo_contacts">
-          
-    
-                <p>Siga nas redes</p>
+  
+              <p>Siga nas redes</p>
 
-                <div id="fundo_social_media">
-                  <a href="#" class="fundo-link" id="instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
+              <div id="fundo_social_media">
+                <a href="#" class="fundo-link" id="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                  <a href="#" class="fundo-link" id="facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
+                <a href="#" class="fundo-link" id="facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
 
-                  <a href="#" class="fundo-link" id="whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                  </a>
-                </div>
+                <a href="#" class="fundo-link" id="whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <span>&copy; 2023 Seu Site. Todos os direitos reservados.</span>
+                
+              </div>
             </div>
         </div>
-    </footer>
+  </footer>
 
 
-</form>
-</body>
+  </form>
+
 </html>

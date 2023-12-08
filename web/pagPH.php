@@ -43,7 +43,7 @@ include_once("../confg/conexao.php");
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
 
-       <img src="../img/SIMPHA- sem fundo.png">
+       <a href="#"><img src="../img/SYMPHA - LOGO 2 1.png"></a>
 
         <ul>
             <li><a href="pag1.php">Sair</a></li>
