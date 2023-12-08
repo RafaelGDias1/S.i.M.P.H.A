@@ -1,6 +1,6 @@
 <?php
 //require ('../confg/conexao.php');
-//session_start();
+session_start();
 ob_start();
 
 $CadEntrar = filter_input(INPUT_POST, 'CadEntrar', FILTER_SANITIZE_STRING);
@@ -38,7 +38,7 @@ if($CadEntrar){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
+    <title>Simpha</title>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
