@@ -3,7 +3,7 @@
  unset($_SESSION['id'], $_SESSION ['nome'],  $_SESSION['email']);
  
 
-$_SESSION['msg'] = "Deslogado";
+//$_SESSION['msg'] = "Deslogado";
 
 header("Location: ")
 ?>
@@ -76,21 +76,20 @@ header("Location: ")
         <div id="fundo_content">
             <div id="fundo_contacts">
   
-              <p>Siga nas redes</p>
+              <p >Siga nas redes</p>
 
               <div id="fundo_social_media">
-                <a href="#" class="fundo-link" id="instagram">
-                  <i class="fa-brands fa-instagram"></i>
+                <a target="_blank" href="#"  class="fundo-link" id="github">
+                  <i class="fa-brands fa-github"></i>
                 </a>
 
-                <a href="#" class="fundo-link" id="facebook">
-                  <i class="fa-brands fa-facebook"></i>
+                <a href="#" class="fundo-link" id="linkedin">
+                <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
-                <a href="#" class="fundo-link" id="whatsapp">
-                  <i class="fa-brands fa-whatsapp"></i>
+                
                 </a>
-                <span>&copy; 2023 Seu Site. Todos os direitos reservados.</span>
+               <!-- <span>&copy; 2023 Seu Site. Todos os direitos reservados.</span>-->
                 
               </div>
             </div>

@@ -22,31 +22,16 @@ session_start();
 </head>
 <body>
 <nav>
-
-
-<?php 
-include_once("../confg/conexao.php");
-//session_start();
-
- if(!empty($_SESSION['usuario'])){
-    echo "OLa ". $_SESSION ['nome']." , bem";
- }
- else{
-    $_SESSION['msg'] = "Deslogado";
-   
-  }
-
-?>
         <input type="checkbox" id="check">
         <label for="check">
            <i class="burges" id="btn"></i> <!--fa fa-bars--> 
            <i class="burges-perdido" id="cancel"></i> <!--fa fa-times--> 
         </label>
 
-       <a href="#"><img src="../img/SYMPHA - LOGO 2 1.png"></a>
+       <a href="../web/pag1.php"><img src="../img/SYMPHA - LOGO 2 1.png"></a>
 
         <ul>
-            <li><a href="pag1.php">Sair</a></li>
+            <li><a href="pag1.php">Inicio</a></li>
            
         </ul>
        
@@ -55,6 +40,8 @@ include_once("../confg/conexao.php");
 
 
     <main>
+
+<img src="../img/moni-removebg-preview.png" alt="monitoramento" class="moni">
 
     <?php 
 
@@ -77,9 +64,22 @@ $sql = mysqli_query($connph, "SELECT * FROM phreading") or die(
 
   while($connph = mysqli_fetch_assoc($sql)) { 
 
-    echo "<table borde='1'>"; 
-    echo "<tr>ph:".$connph["ph"]."<tr> <br/>"; 
-    echo "<tr>hora:".$connph["hora"]." <tr><br/><br/>"; 
+    echo "<table>";
+
+   
+   echo " <tr>
+     <th> Data e Hora  </th>
+     <th> PH </th>
+    </tr>";
+  
+
+echo "<tr>
+    <td>".$connph["hora"]."</td>
+    <td> ".$connph["ph"]."</td>
+  </tr>
+ ";
+   
+ 
   }
 ?>
 <script src="../js/js.js"></script>
