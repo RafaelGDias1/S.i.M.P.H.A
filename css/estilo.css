@@ -226,7 +226,7 @@ footer{
   background-color: var(--color--neutral-10);
   display: flex;
   grid-template-columns: repeat(4, 1fr); /*vai deixa as 4 cores em coluna*/
-  padding: 3rem 3.5rem;
+  padding: 1rem 1.5rem;
 }
 #fundo_contacts > p{
   padding-left: 550px;
